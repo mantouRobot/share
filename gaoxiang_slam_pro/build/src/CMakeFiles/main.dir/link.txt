@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/main.dir/main.cpp.o  -o ../../bin/main  -L/home/mantou/桌面/share/gaoxiang_slam_pro/lib -rdynamic 
