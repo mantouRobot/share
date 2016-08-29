@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro
+CMAKE_SOURCE_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro/build
+CMAKE_BINARY_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,6 +102,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named slam_OTHER_FILES
+
+# Build rule for target.
+slam_OTHER_FILES: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 slam_OTHER_FILES
+.PHONY : slam_OTHER_FILES
+
+# fast build rule for target.
+slam_OTHER_FILES/fast:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/build
+.PHONY : slam_OTHER_FILES/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -114,6 +127,78 @@ main/fast:
 	$(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o: CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o
+
+# target to build an object file
+CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+
+CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i: CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i
+
+# target to preprocess a source file
+CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+
+CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s: CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s
+
+# target to generate assembly for a file
+CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+
+CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o: CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o
+
+# target to build an object file
+CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+
+CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i: CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i
+
+# target to preprocess a source file
+CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+
+CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s: CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s
+
+# target to generate assembly for a file
+CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -122,7 +207,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... slam_OTHER_FILES"
 	@echo "... main"
+	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o"
+	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i"
+	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s"
+	@echo "... CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+	@echo "... CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i"
+	@echo "... CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

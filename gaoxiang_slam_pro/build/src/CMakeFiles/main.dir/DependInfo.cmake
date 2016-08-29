@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mantou/桌面/share/gaoxiang_slam_pro/src/main.cpp" "/home/mantou/桌面/share/gaoxiang_slam_pro/build/src/CMakeFiles/main.dir/main.cpp.o"
+  "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/src/CMakeFiles/main.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,6 +15,12 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
+  "/usr/include/vtk-5.8"
+  "/usr/local/include/opencv"
+  "/usr/local/include"
+  "/usr/include/pcl-1.7"
+  "/usr/include/eigen3"
+  "/usr/include/ni"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
