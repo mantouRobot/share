@@ -1,4 +1,3 @@
-find_package(Boost REQUIRED)
 find_package(PCL REQUIRED COMPONENTS common io)
 find_package(OpenCV REQUIRED)
 
@@ -6,9 +5,9 @@ find_package(OpenCV REQUIRED)
 #PCL的头文件，库文件位置需要显示指出
 #add_definitions(${PCL_DEFINITIONS})
 include_directories(${PCL_INCLUDE_DIRS})
-#link_directories(${PCL_LINK_DIRS})
+link_directories(${PCL_LINK_DIRS})
 
 add_executable(main main.cpp)
-target_link_libraries(main ${OpenCV_LIBS} ${PCL_LIBS} ${Boost_SYSTEM_LIBRARY})
+target_link_libraries(main ${OpenCV_LIBS} ${PCL_LIBRARIES})
 
 

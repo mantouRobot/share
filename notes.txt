@@ -1,0 +1,11 @@
+1. imread等读写函数在使用时读取的是相对于源文件的路径，不是相对于可执行文件的路径
+2. 链接错误：                                                               
+       In function `__static_initialization_and_destruction_0':
+	     /usr/include/boost/system/error_code.hpp:222: undefined referenc
+	 解决1：
+	     find_package(Boost REQUIRED COMPONENTS system)
+	     target_link_libraries(.. ${Boost_SYSTEM_LIBRARY})
+	 解决2：
+	     写错了链接库名 ${PCL_LIBS}->${PCL_LIBRARIES}
+3. 深度图的数据类型为无符号短整型ushort，使用的时候应先强制为double，否则无符号与有符号都转为无符号再运算
+

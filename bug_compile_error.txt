@@ -1,6 +1,0 @@
-1. 链接错误：
-						In function `__static_initialization_and_destruction_0':
-						/usr/include/boost/system/error_code.hpp:222: undefined reference to `boost::system::generic_category()'
-	 解决：
-	 					find_package(Boost REQUIRED COMPONENTS system)
-						target_link_libraries(.. ${Boost_SYSTEM_LIBRARY})
