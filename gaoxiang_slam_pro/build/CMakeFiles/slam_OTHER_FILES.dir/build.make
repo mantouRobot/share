@@ -77,15 +77,15 @@ CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompil
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
-	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp > CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp > CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
 
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp -o CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp -o CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
 
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o.requires:
 .PHONY : CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o.requires
@@ -100,15 +100,15 @@ CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o:
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o: ../src/main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o"
-	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o -c /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o -c /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp
 
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.i"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp > CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp > CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.i
 
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.s"
-	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp -o CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp -o CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.s
 
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o.requires:
 .PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o.requires
@@ -118,6 +118,29 @@ CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o.provides: CMakeFiles/slam_OTHER_F
 .PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o.provides
 
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o.provides.build: CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: 
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../src/slamBase.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o -c /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp > CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.i
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp -o CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.s
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.requires:
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.requires
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.provides: CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.requires
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.provides.build
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.provides
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.provides.build: CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o
 
 slam_OTHER_FILES: CMakeFiles/slam_OTHER_FILES
 slam_OTHER_FILES: CMakeFiles/slam_OTHER_FILES.dir/build.make

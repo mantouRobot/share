@@ -7,3 +7,6 @@ CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompil
 
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o: ../src/main.cpp
 
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../include/slamBase.h
+CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../src/slamBase.cpp
+

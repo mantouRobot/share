@@ -8,4 +8,9 @@
 	 解决2：
 	     写错了链接库名 ${PCL_LIBS}->${PCL_LIBRARIES}
 3. 深度图的数据类型为无符号短整型ushort，使用的时候应先强制为double，否则无符号与有符号都转为无符号再运算
+4. 编译错误：
+			pcl::PointCloud<pcl::PointXYZRGBA>::Ptr
+      error: specializing member ‘pcl::PointCloud<pcl::PointXYZRGBA>::Ptr’ requires ‘template<>’ syntax
+	 解决：
+	 		是上文的 struct, class等没有加 ; 导致下一语句错误！！！
 

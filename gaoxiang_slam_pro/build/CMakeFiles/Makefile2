@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro/build
 CMakeFiles/slam_OTHER_FILES.dir/all:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/depend
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles  2 3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles  3 4 5 6
 	@echo "Built target slam_OTHER_FILES"
 .PHONY : CMakeFiles/slam_OTHER_FILES.dir/all
 
@@ -72,7 +72,7 @@ all: CMakeFiles/slam_OTHER_FILES.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/slam_OTHER_FILES.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/slam_OTHER_FILES.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 0
 .PHONY : CMakeFiles/slam_OTHER_FILES.dir/rule
@@ -95,10 +95,12 @@ clean: CMakeFiles/slam_OTHER_FILES.dir/clean
 
 # Convenience name for "all" pass in the directory.
 src/all: src/CMakeFiles/main.dir/all
+src/all: src/CMakeFiles/slamBase.dir/all
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
 src/clean: src/CMakeFiles/main.dir/clean
+src/clean: src/CMakeFiles/slamBase.dir/clean
 .PHONY : src/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -138,6 +140,41 @@ src/CMakeFiles/main.dir/clean:
 
 # clean rule for target.
 clean: src/CMakeFiles/main.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/slamBase.dir
+
+# All Build rule for target.
+src/CMakeFiles/slamBase.dir/all:
+	$(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/depend
+	$(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles  2
+	@echo "Built target slamBase"
+.PHONY : src/CMakeFiles/slamBase.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/slamBase.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/slamBase.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slamBase.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/slamBase.dir/rule
+
+# Convenience name for target.
+slamBase: src/CMakeFiles/slamBase.dir/rule
+.PHONY : slamBase
+
+# clean rule for target.
+src/CMakeFiles/slamBase.dir/clean:
+	$(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/clean
+.PHONY : src/CMakeFiles/slamBase.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/slamBase.dir/clean
 .PHONY : clean
 
 #=============================================================================

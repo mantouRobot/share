@@ -67,4 +67,5 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/slam_OTHER_FILES.dir/DependInfo.cmake"
   "src/CMakeFiles/main.dir/DependInfo.cmake"
+  "src/CMakeFiles/slamBase.dir/DependInfo.cmake"
   )

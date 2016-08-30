@@ -1,2 +1,3 @@
 /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src/CMakeFiles/main.dir
+/home/mantou/Desktop/share/gaoxiang_slam_pro/build/src/CMakeFiles/slamBase.dir
 /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir

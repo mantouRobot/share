@@ -1,7 +1,7 @@
 cmake_minimum_required( VERSION 2.8 )
 project( slam )
 
-SET(CMAKE_CXX_COMPILER "g++")
+#SET(CMAKE_CXX_COMPILER "g++")
 SET( CMAKE_BUILD_TYPE Debug  )
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

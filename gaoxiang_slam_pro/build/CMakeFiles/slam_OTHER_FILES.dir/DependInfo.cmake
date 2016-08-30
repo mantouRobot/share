@@ -11,6 +11,7 @@ SET(CMAKE_C_COMPILER_ID "GNU")
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o"
+  "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

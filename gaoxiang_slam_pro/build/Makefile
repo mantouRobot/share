@@ -127,6 +127,19 @@ main/fast:
 	$(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named slamBase
+
+# Build rule for target.
+slamBase: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 slamBase
+.PHONY : slamBase
+
+# fast build rule for target.
+slamBase/fast:
+	$(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
+.PHONY : slamBase/fast
+
 CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o: CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
 .PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o
 
@@ -199,6 +212,30 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/slamBase.o: src/slamBase.cpp.o
+.PHONY : src/slamBase.o
+
+# target to build an object file
+src/slamBase.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o
+.PHONY : src/slamBase.cpp.o
+
+src/slamBase.i: src/slamBase.cpp.i
+.PHONY : src/slamBase.i
+
+# target to preprocess a source file
+src/slamBase.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.i
+.PHONY : src/slamBase.cpp.i
+
+src/slamBase.s: src/slamBase.cpp.s
+.PHONY : src/slamBase.s
+
+# target to generate assembly for a file
+src/slamBase.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.s
+.PHONY : src/slamBase.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,6 +246,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... slam_OTHER_FILES"
 	@echo "... main"
+	@echo "... slamBase"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s"
@@ -218,6 +256,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/slamBase.o"
+	@echo "... src/slamBase.i"
+	@echo "... src/slamBase.s"
 .PHONY : help
 
 

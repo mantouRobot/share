@@ -115,6 +115,20 @@ main/fast:
 	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+# Convenience name for target.
+src/CMakeFiles/slamBase.dir/rule:
+	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slamBase.dir/rule
+.PHONY : src/CMakeFiles/slamBase.dir/rule
+
+# Convenience name for target.
+slamBase: src/CMakeFiles/slamBase.dir/rule
+.PHONY : slamBase
+
+# fast build rule for target.
+slamBase/fast:
+	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
+.PHONY : slamBase/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -139,6 +153,30 @@ main.cpp.s:
 	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+slamBase.o: slamBase.cpp.o
+.PHONY : slamBase.o
+
+# target to build an object file
+slamBase.cpp.o:
+	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.o
+.PHONY : slamBase.cpp.o
+
+slamBase.i: slamBase.cpp.i
+.PHONY : slamBase.i
+
+# target to preprocess a source file
+slamBase.cpp.i:
+	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.i
+.PHONY : slamBase.cpp.i
+
+slamBase.s: slamBase.cpp.s
+.PHONY : slamBase.s
+
+# target to generate assembly for a file
+slamBase.cpp.s:
+	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.s
+.PHONY : slamBase.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -148,9 +186,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... main"
 	@echo "... rebuild_cache"
+	@echo "... slamBase"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... slamBase.o"
+	@echo "... slamBase.i"
+	@echo "... slamBase.s"
 .PHONY : help
 
 

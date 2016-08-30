@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp
-iostream
--
-string
--
-opencv2/core/core.hpp
--
-opencv2/imgproc/imgproc.hpp
--
-opencv2/highgui/highgui.hpp
+../include/slamBase.h
+pcl/point_types.h
 -
 pcl/io/pcd_io.h
 -
-pcl/point_types.h
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+vector
+-
+
+/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp
+slamBase.h
 -
 
