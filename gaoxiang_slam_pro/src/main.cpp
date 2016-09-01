@@ -18,6 +18,7 @@ int main(int argc, char** argv)
      double camera_fx = 518.0;
      double camera_fy = 519.0;
 
+
     cv::Mat img_rgb, img_depth;
     img_rgb = cv::imread("../data/rgb.png");
     img_depth = cv::imread("../data/depth.png", -1);//-1表示原始数据不做任何修改

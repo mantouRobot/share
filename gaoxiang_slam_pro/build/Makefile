@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro
+CMAKE_SOURCE_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro/build
+CMAKE_BINARY_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -113,6 +113,19 @@ slam_OTHER_FILES: cmake_check_build_system
 slam_OTHER_FILES/fast:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/build
 .PHONY : slam_OTHER_FILES/fast
+
+#=============================================================================
+# Target rules for targets named feature_detect
+
+# Build rule for target.
+feature_detect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 feature_detect
+.PHONY : feature_detect
+
+# fast build rule for target.
+feature_detect/fast:
+	$(MAKE) -f src/CMakeFiles/feature_detect.dir/build.make src/CMakeFiles/feature_detect.dir/build
+.PHONY : feature_detect/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -188,6 +201,30 @@ CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
 .PHONY : CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
 
+src/feature_detect.o: src/feature_detect.cpp.o
+.PHONY : src/feature_detect.o
+
+# target to build an object file
+src/feature_detect.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o
+.PHONY : src/feature_detect.cpp.o
+
+src/feature_detect.i: src/feature_detect.cpp.i
+.PHONY : src/feature_detect.i
+
+# target to preprocess a source file
+src/feature_detect.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.i
+.PHONY : src/feature_detect.cpp.i
+
+src/feature_detect.s: src/feature_detect.cpp.s
+.PHONY : src/feature_detect.s
+
+# target to generate assembly for a file
+src/feature_detect.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.s
+.PHONY : src/feature_detect.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -245,6 +282,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... slam_OTHER_FILES"
+	@echo "... feature_detect"
 	@echo "... main"
 	@echo "... slamBase"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o"
@@ -253,6 +291,9 @@ help:
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s"
+	@echo "... src/feature_detect.o"
+	@echo "... src/feature_detect.i"
+	@echo "... src/feature_detect.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

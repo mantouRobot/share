@@ -1,4 +1,4 @@
-# Install script for directory: /home/mantou/Desktop/share/gaoxiang_slam_pro/src
+# Install script for directory: /home/mantou/桌面/share/gaoxiang_slam_pro/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

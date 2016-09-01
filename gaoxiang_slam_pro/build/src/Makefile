@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro
+CMAKE_SOURCE_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro/build
+CMAKE_BINARY_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src/CMakeFiles/progress.marks
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 0
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/桌面/share/gaoxiang_slam_pro/build/src/CMakeFiles/progress.marks
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,22 +88,36 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/feature_detect.dir/rule:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/feature_detect.dir/rule
+.PHONY : src/CMakeFiles/feature_detect.dir/rule
+
+# Convenience name for target.
+feature_detect: src/CMakeFiles/feature_detect.dir/rule
+.PHONY : feature_detect
+
+# fast build rule for target.
+feature_detect/fast:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/feature_detect.dir/build.make src/CMakeFiles/feature_detect.dir/build
+.PHONY : feature_detect/fast
+
+# Convenience name for target.
 src/CMakeFiles/main.dir/rule:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
 .PHONY : src/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -112,12 +126,12 @@ main: src/CMakeFiles/main.dir/rule
 
 # fast build rule for target.
 main/fast:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
 # Convenience name for target.
 src/CMakeFiles/slamBase.dir/rule:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slamBase.dir/rule
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slamBase.dir/rule
 .PHONY : src/CMakeFiles/slamBase.dir/rule
 
 # Convenience name for target.
@@ -126,15 +140,39 @@ slamBase: src/CMakeFiles/slamBase.dir/rule
 
 # fast build rule for target.
 slamBase/fast:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
 .PHONY : slamBase/fast
+
+feature_detect.o: feature_detect.cpp.o
+.PHONY : feature_detect.o
+
+# target to build an object file
+feature_detect.cpp.o:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/feature_detect.dir/build.make src/CMakeFiles/feature_detect.dir/feature_detect.cpp.o
+.PHONY : feature_detect.cpp.o
+
+feature_detect.i: feature_detect.cpp.i
+.PHONY : feature_detect.i
+
+# target to preprocess a source file
+feature_detect.cpp.i:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/feature_detect.dir/build.make src/CMakeFiles/feature_detect.dir/feature_detect.cpp.i
+.PHONY : feature_detect.cpp.i
+
+feature_detect.s: feature_detect.cpp.s
+.PHONY : feature_detect.s
+
+# target to generate assembly for a file
+feature_detect.cpp.s:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/feature_detect.dir/build.make src/CMakeFiles/feature_detect.dir/feature_detect.cpp.s
+.PHONY : feature_detect.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.o
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +180,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.i
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +188,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.s
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 slamBase.o: slamBase.cpp.o
@@ -158,7 +196,7 @@ slamBase.o: slamBase.cpp.o
 
 # target to build an object file
 slamBase.cpp.o:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.o
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.o
 .PHONY : slamBase.cpp.o
 
 slamBase.i: slamBase.cpp.i
@@ -166,7 +204,7 @@ slamBase.i: slamBase.cpp.i
 
 # target to preprocess a source file
 slamBase.cpp.i:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.i
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.i
 .PHONY : slamBase.cpp.i
 
 slamBase.s: slamBase.cpp.s
@@ -174,7 +212,7 @@ slamBase.s: slamBase.cpp.s
 
 # target to generate assembly for a file
 slamBase.cpp.s:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.s
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.s
 .PHONY : slamBase.cpp.s
 
 # Help Target
@@ -184,9 +222,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... feature_detect"
 	@echo "... main"
 	@echo "... rebuild_cache"
 	@echo "... slamBase"
+	@echo "... feature_detect.o"
+	@echo "... feature_detect.i"
+	@echo "... feature_detect.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -204,6 +246,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

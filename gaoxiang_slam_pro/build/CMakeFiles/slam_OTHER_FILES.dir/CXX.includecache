@@ -15,10 +15,18 @@ opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
 -
+opencv2/calib3d/calib3d.hpp
+-
+opencv2/nonfree/features2d.hpp
+-
+opencv2/nonfree/nonfree.hpp
+-
 vector
 -
+string
+-
 
-/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp
+/home/mantou/桌面/share/gaoxiang_slam_pro/src/slamBase.cpp
 slamBase.h
 -
 

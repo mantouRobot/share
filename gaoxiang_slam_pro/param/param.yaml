@@ -1,0 +1,11 @@
+%YAML:1.0
+detector: SIFT
+descriptor: SIFT
+good_match_threshold: 4
+
+#camera
+cx: 325.5
+cy: 253.5
+fx: 518.0
+fy: 519.0
+scale: 1000.0

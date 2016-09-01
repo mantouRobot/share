@@ -235,12 +235,4 @@ src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/pcl-1.7/pcl/point_cloud
 src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/pcl-1.7/pcl/point_traits.h
 src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/pcl-1.7/pcl/point_types.h
 src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/pcl-1.7/pcl/register_point_struct.h
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/core.hpp
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/core_c.h
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/mat.hpp
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/operations.hpp
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/types_c.h
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/version.hpp
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
-src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
 

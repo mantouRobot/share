@@ -234,14 +234,4 @@ src/CMakeFiles/main.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/point_cloud.h
 src/CMakeFiles/main.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/point_traits.h
 src/CMakeFiles/main.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/point_types.h
 src/CMakeFiles/main.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/register_point_struct.h
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/core/core.hpp
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/core/core_c.h
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/core/mat.hpp
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/core/operations.hpp
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/core/types_c.h
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/core/version.hpp
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
-src/CMakeFiles/main.dir/main.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
 

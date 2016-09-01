@@ -3,7 +3,7 @@
 
 src/CMakeFiles/slamBase.dir/slamBase.cpp.o
  ../include/slamBase.h
- /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp
+ /home/mantou/桌面/share/gaoxiang_slam_pro/src/slamBase.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Eigen2Support
@@ -236,11 +236,3 @@ src/CMakeFiles/slamBase.dir/slamBase.cpp.o
  /usr/include/pcl-1.7/pcl/point_traits.h
  /usr/include/pcl-1.7/pcl/point_types.h
  /usr/include/pcl-1.7/pcl/register_point_struct.h
- /usr/local/include/opencv2/core/core.hpp
- /usr/local/include/opencv2/core/core_c.h
- /usr/local/include/opencv2/core/mat.hpp
- /usr/local/include/opencv2/core/operations.hpp
- /usr/local/include/opencv2/core/types_c.h
- /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/highgui/highgui.hpp
- /usr/local/include/opencv2/highgui/highgui_c.h
