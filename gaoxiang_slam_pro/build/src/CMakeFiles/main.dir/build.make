@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro
+CMAKE_SOURCE_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro/build
+CMAKE_BINARY_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/main.dir/depend.make
@@ -54,17 +54,17 @@ include src/CMakeFiles/main.dir/flags.make
 
 src/CMakeFiles/main.dir/main.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/main.dir/main.cpp.o"
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/mantou/桌面/share/gaoxiang_slam_pro/src/main.cpp
 
 src/CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp > CMakeFiles/main.dir/main.cpp.i
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/桌面/share/gaoxiang_slam_pro/src/main.cpp > CMakeFiles/main.dir/main.cpp.i
 
 src/CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/桌面/share/gaoxiang_slam_pro/src/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
 src/CMakeFiles/main.dir/main.cpp.o.requires:
 .PHONY : src/CMakeFiles/main.dir/main.cpp.o.requires
@@ -84,25 +84,25 @@ main_EXTERNAL_OBJECTS =
 
 ../bin/main: src/CMakeFiles/main.dir/main.cpp.o
 ../bin/main: src/CMakeFiles/main.dir/build.make
-../bin/main: /usr/local/lib/libopencv_videostab.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_video.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_ts.a
-../bin/main: /usr/local/lib/libopencv_superres.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_stitching.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_photo.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_ocl.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_objdetect.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_nonfree.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_ml.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_legacy.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_imgproc.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_highgui.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_gpu.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_flann.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_features2d.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_core.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_contrib.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_calib3d.so.2.4.11
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_ts.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_nonfree.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -118,6 +118,23 @@ main_EXTERNAL_OBJECTS =
 ../bin/main: /usr/lib/libvtkHybrid.so.5.8.0
 ../bin/main: /usr/lib/libvtkCharts.so.5.8.0
 ../bin/main: /usr/lib/libpcl_io.so
+../bin/main: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
+../bin/main: /usr/lib/libpcl_kdtree.so
+../bin/main: /usr/lib/libpcl_search.so
+../bin/main: /usr/lib/libpcl_sample_consensus.so
+../bin/main: /usr/lib/libpcl_filters.so
+../bin/main: /usr/lib/libpcl_features.so
+../bin/main: /usr/lib/libpcl_keypoints.so
+../bin/main: /usr/lib/libpcl_segmentation.so
+../bin/main: /usr/lib/libpcl_visualization.so
+../bin/main: /usr/lib/libpcl_outofcore.so
+../bin/main: /usr/lib/libpcl_registration.so
+../bin/main: /usr/lib/libpcl_recognition.so
+../bin/main: /usr/lib/x86_64-linux-gnu/libqhull.so
+../bin/main: /usr/lib/libpcl_surface.so
+../bin/main: /usr/lib/libpcl_people.so
+../bin/main: /usr/lib/libpcl_tracking.so
+../bin/main: /usr/lib/libpcl_apps.so
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -125,28 +142,45 @@ main_EXTERNAL_OBJECTS =
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
 ../bin/main: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
 ../bin/main: /usr/lib/x86_64-linux-gnu/libpthread.so
+../bin/main: /usr/lib/x86_64-linux-gnu/libqhull.so
 ../bin/main: /usr/lib/libOpenNI.so
+../bin/main: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
 ../bin/main: /usr/lib/libvtkCommon.so.5.8.0
 ../bin/main: /usr/lib/libvtkRendering.so.5.8.0
 ../bin/main: /usr/lib/libvtkHybrid.so.5.8.0
 ../bin/main: /usr/lib/libvtkCharts.so.5.8.0
-../bin/main: /usr/local/lib/libopencv_nonfree.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_ocl.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_gpu.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_photo.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_objdetect.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_legacy.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_video.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_ml.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_calib3d.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_features2d.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_highgui.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_imgproc.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_flann.so.2.4.11
-../bin/main: /usr/local/lib/libopencv_core.so.2.4.11
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_nonfree.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8
+../bin/main: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
 ../bin/main: /usr/lib/libpcl_common.so
 ../bin/main: /usr/lib/libpcl_octree.so
 ../bin/main: /usr/lib/libpcl_io.so
+../bin/main: /usr/lib/libpcl_kdtree.so
+../bin/main: /usr/lib/libpcl_search.so
+../bin/main: /usr/lib/libpcl_sample_consensus.so
+../bin/main: /usr/lib/libpcl_filters.so
+../bin/main: /usr/lib/libpcl_features.so
+../bin/main: /usr/lib/libpcl_keypoints.so
+../bin/main: /usr/lib/libpcl_segmentation.so
+../bin/main: /usr/lib/libpcl_visualization.so
+../bin/main: /usr/lib/libpcl_outofcore.so
+../bin/main: /usr/lib/libpcl_registration.so
+../bin/main: /usr/lib/libpcl_recognition.so
+../bin/main: /usr/lib/libpcl_surface.so
+../bin/main: /usr/lib/libpcl_people.so
+../bin/main: /usr/lib/libpcl_tracking.so
+../bin/main: /usr/lib/libpcl_apps.so
 ../bin/main: /usr/lib/libvtkViews.so.5.8.0
 ../bin/main: /usr/lib/libvtkInfovis.so.5.8.0
 ../bin/main: /usr/lib/libvtkWidgets.so.5.8.0
@@ -162,7 +196,7 @@ main_EXTERNAL_OBJECTS =
 ../bin/main: /usr/lib/libvtksys.so.5.8.0
 ../bin/main: src/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../bin/main"
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/main.dir/build: ../bin/main
@@ -172,10 +206,10 @@ src/CMakeFiles/main.dir/requires: src/CMakeFiles/main.dir/main.cpp.o.requires
 .PHONY : src/CMakeFiles/main.dir/requires
 
 src/CMakeFiles/main.dir/clean:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src && $(CMAKE_COMMAND) -P CMakeFiles/main.dir/cmake_clean.cmake
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build/src && $(CMAKE_COMMAND) -P CMakeFiles/main.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/main.dir/clean
 
 src/CMakeFiles/main.dir/depend:
-	cd /home/mantou/Desktop/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mantou/Desktop/share/gaoxiang_slam_pro /home/mantou/Desktop/share/gaoxiang_slam_pro/src /home/mantou/Desktop/share/gaoxiang_slam_pro/build /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src /home/mantou/Desktop/share/gaoxiang_slam_pro/build/src/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mantou/桌面/share/gaoxiang_slam_pro /home/mantou/桌面/share/gaoxiang_slam_pro/src /home/mantou/桌面/share/gaoxiang_slam_pro/build /home/mantou/桌面/share/gaoxiang_slam_pro/build/src /home/mantou/桌面/share/gaoxiang_slam_pro/build/src/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/main.dir/depend
 
