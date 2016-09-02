@@ -82,8 +82,7 @@ ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, Camer
         if(matches[i].distance < good_match_threshold*min_dist)
             good_matches.push_back(matches[i]);
     }
-    std::cout << "good matches: " <<good_matches.size() << std::endl;
-
+    std::cout << "good matches: " <<good_matches.size() << std::endl;       
     //PnP
     std::vector<cv::Point3f> pts_obj;
     std::vector<cv::Point2f> pts_img;
