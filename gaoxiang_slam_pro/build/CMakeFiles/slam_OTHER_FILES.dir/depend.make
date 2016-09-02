@@ -8,8 +8,14 @@ CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompil
 CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o: ../include/slamBase.h
 CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o: ../src/feature_detect.cpp
 
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o: ../include/slamBase.h
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o: ../src/joint_point_cloud.cpp
+
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o: ../src/main.cpp
 
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../include/slamBase.h
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../src/slamBase.cpp
+
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o: ../include/slamBase.h
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o: ../src/vo.cpp
 

@@ -17,4 +17,9 @@
 			1）~/.local/share/applications/qt		----->  Exec=bash -i -c /home....
 			2）Qt/Tools/share/qt/generic-highlight		------> cp xml.xml launch.xml, color="#g00"
 				 /usr/share/kde4/katepart/syntax/
-
+6. linux下用sstream将int转string
+		#include <sstream>
+		stringstream ss;
+		string s;
+		ss << "rgb" << i++ << ".png";
+		ss >> s;

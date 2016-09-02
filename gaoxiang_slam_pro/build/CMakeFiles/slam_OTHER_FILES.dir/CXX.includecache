@@ -21,12 +21,30 @@ opencv2/nonfree/features2d.hpp
 -
 opencv2/nonfree/nonfree.hpp
 -
+opencv2/core/eigen.hpp
+-
 vector
 -
 string
 -
+Eigen/Core
+-
+Eigen/Geometry
+-
+pcl/common/transforms.h
+-
+pcl/visualization/cloud_viewer.h
+-
+pcl/filters/voxel_grid.h
+-
 
-/home/mantou/桌面/share/gaoxiang_slam_pro/src/slamBase.cpp
+/home/mantou/桌面/share/gaoxiang_slam_pro/src/vo.cpp
+iostream
+-
+string
+-
 slamBase.h
+-
+sstream
 -
 

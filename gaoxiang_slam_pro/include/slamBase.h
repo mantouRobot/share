@@ -8,9 +8,17 @@
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/nonfree/features2d.hpp>
 #include <opencv2/nonfree/nonfree.hpp>
+#include <opencv2/core/eigen.hpp>
 
 #include <vector>
 #include <string>
+
+#include <Eigen/Core>
+#include <Eigen/Geometry>
+
+#include <pcl/common/transforms.h>
+#include <pcl/visualization/cloud_viewer.h>
+#include <pcl/filters/voxel_grid.h>
 
 struct CameraIntrinsicParams
 {
@@ -75,8 +83,23 @@ void extractKeyPointAndDesp(FramePair &frame_pair, std::string detector, std::st
  */
 ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, CameraIntrinsicParams &camera);
 
+/**
+ * @brief cvMat2Eigen
+ * @param rvec
+ * @param tvec
+ * @return
+ */
+Eigen::Isometry3d cvMat2Eigen( cv::Mat& rvec, cv::Mat& tvec );
 
-
+/**
+ * @brief joinPointCloud
+ * @param original
+ * @param newFrame
+ * @param T
+ * @param camera
+ * @return
+ */
+pcl::PointCloud<pcl::PointXYZRGBA>::Ptr joinPointCloud(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr original, FramePair& newFrame, Eigen::Isometry3d T, CameraIntrinsicParams& camera , double gridsize);
 
 
 

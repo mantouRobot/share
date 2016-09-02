@@ -128,6 +128,19 @@ feature_detect/fast:
 .PHONY : feature_detect/fast
 
 #=============================================================================
+# Target rules for targets named joint_point_cloud
+
+# Build rule for target.
+joint_point_cloud: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 joint_point_cloud
+.PHONY : joint_point_cloud
+
+# fast build rule for target.
+joint_point_cloud/fast:
+	$(MAKE) -f src/CMakeFiles/joint_point_cloud.dir/build.make src/CMakeFiles/joint_point_cloud.dir/build
+.PHONY : joint_point_cloud/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -152,6 +165,19 @@ slamBase: cmake_check_build_system
 slamBase/fast:
 	$(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
 .PHONY : slamBase/fast
+
+#=============================================================================
+# Target rules for targets named vo
+
+# Build rule for target.
+vo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vo
+.PHONY : vo
+
+# fast build rule for target.
+vo/fast:
+	$(MAKE) -f src/CMakeFiles/vo.dir/build.make src/CMakeFiles/vo.dir/build
+.PHONY : vo/fast
 
 CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o: CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
 .PHONY : CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o
@@ -225,6 +251,30 @@ src/feature_detect.cpp.s:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.s
 .PHONY : src/feature_detect.cpp.s
 
+src/joint_point_cloud.o: src/joint_point_cloud.cpp.o
+.PHONY : src/joint_point_cloud.o
+
+# target to build an object file
+src/joint_point_cloud.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o
+.PHONY : src/joint_point_cloud.cpp.o
+
+src/joint_point_cloud.i: src/joint_point_cloud.cpp.i
+.PHONY : src/joint_point_cloud.i
+
+# target to preprocess a source file
+src/joint_point_cloud.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.i
+.PHONY : src/joint_point_cloud.cpp.i
+
+src/joint_point_cloud.s: src/joint_point_cloud.cpp.s
+.PHONY : src/joint_point_cloud.s
+
+# target to generate assembly for a file
+src/joint_point_cloud.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.s
+.PHONY : src/joint_point_cloud.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -273,6 +323,30 @@ src/slamBase.cpp.s:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.s
 .PHONY : src/slamBase.cpp.s
 
+src/vo.o: src/vo.cpp.o
+.PHONY : src/vo.o
+
+# target to build an object file
+src/vo.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o
+.PHONY : src/vo.cpp.o
+
+src/vo.i: src/vo.cpp.i
+.PHONY : src/vo.i
+
+# target to preprocess a source file
+src/vo.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.i
+.PHONY : src/vo.cpp.i
+
+src/vo.s: src/vo.cpp.s
+.PHONY : src/vo.s
+
+# target to generate assembly for a file
+src/vo.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.s
+.PHONY : src/vo.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -283,8 +357,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... slam_OTHER_FILES"
 	@echo "... feature_detect"
+	@echo "... joint_point_cloud"
 	@echo "... main"
 	@echo "... slamBase"
+	@echo "... vo"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s"
@@ -294,12 +370,18 @@ help:
 	@echo "... src/feature_detect.o"
 	@echo "... src/feature_detect.i"
 	@echo "... src/feature_detect.s"
+	@echo "... src/joint_point_cloud.o"
+	@echo "... src/joint_point_cloud.i"
+	@echo "... src/joint_point_cloud.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/slamBase.o"
 	@echo "... src/slamBase.i"
 	@echo "... src/slamBase.s"
+	@echo "... src/vo.o"
+	@echo "... src/vo.i"
+	@echo "... src/vo.s"
 .PHONY : help
 
 

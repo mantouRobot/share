@@ -48,8 +48,8 @@ void extractKeyPointAndDesp(FramePair &frame_pair, std::string detector, std::st
     cv::Ptr<cv::FeatureDetector> _detect;
     cv::Ptr<cv::DescriptorExtractor> _descriptor;
 
-    _detect->create(detector.c_str());
-    _descriptor->create(descriptor.c_str());
+    _detect = cv::FeatureDetector::create(detector.c_str());
+    _descriptor = cv::DescriptorExtractor::create(descriptor.c_str());
 
     _detect->detect(frame_pair.rgb, frame_pair.kp);
     _descriptor->compute(frame_pair.rgb, frame_pair.kp, frame_pair.desp);
@@ -59,14 +59,7 @@ void extractKeyPointAndDesp(FramePair &frame_pair, std::string detector, std::st
 
 ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, CameraIntrinsicParams &camera)
 {
-    cv::FileStorage param_file("../param/param.yaml", cv::FileStorage::READ);
-    if(!param_file.isOpened())
-        std::cerr << "Can't open the param." << std::endl;
-    camera.cx = (double)param_file["cx"];
-    camera.cy = (double)param_file["cy"];
-    camera.fx = (double)param_file["fx"];
-    camera.fy = (double)param_file["fy"];
-    camera.scale = (double)param_file["scale"];
+
 
     //粗匹配
     std::vector<cv::DMatch> matches;
@@ -78,7 +71,7 @@ ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, Camer
     //精匹配
     std::vector<cv::DMatch> good_matches;
     double min_dist = 9999;
-    double good_match_threshold = (double)param_file["good_match_threshold"];
+    double good_match_threshold = 4;
     for(int i = 0; i < matches.size(); ++i)
     {
         if(matches[i].distance < min_dist)
@@ -127,21 +120,42 @@ ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, Camer
 
 }
 
+Eigen::Isometry3d cvMat2Eigen(cv::Mat &rvec, cv::Mat &tvec)
+{
+    cv::Mat R;
+    cv::Rodrigues(rvec, R);
+    Eigen::Matrix3d r;
+    cv::cv2eigen(R, r);
+    Eigen::AngleAxisd angle(r);
+    Eigen::Isometry3d T = Eigen::Isometry3d::Identity();
+    T = angle;
 
+    Eigen::Translation<double, 3> trans(tvec.at<double>(0,0), tvec.at<double>(0,1),tvec.at<double>(0,2));
+    T(0,3) = tvec.at<double>(0,0);
+    T(1,3) = tvec.at<double>(0,1);
+    T(2,3) = tvec.at<double>(0,2);
+    return T;
+}
 
+pcl::PointCloud<pcl::PointXYZRGBA>::Ptr joinPointCloud(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr original,
+                                                       FramePair &newFrame, Eigen::Isometry3d T,
+                                                       CameraIntrinsicParams &camera,
+                                                       double gridsize)
+{
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr newcloud = image2PointCloud(newFrame.rgb, newFrame.depth, camera);
 
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr output(new pcl::PointCloud<pcl::PointXYZRGBA>);
+    pcl::transformPointCloud(*original, *output, T.matrix());
+    *newcloud += *output;
 
-
-
-
-
-
-
-
-
-
-
-
+    //voxel grid 滤波降采样
+    static pcl::VoxelGrid<pcl::PointXYZRGBA> voxel;
+    voxel.setLeafSize( gridsize, gridsize, gridsize );
+    voxel.setInputCloud( newcloud );
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr tmp( new pcl::PointCloud<pcl::PointXYZRGBA> );
+    voxel.filter( *tmp );
+    return tmp;
+}
 
 
 

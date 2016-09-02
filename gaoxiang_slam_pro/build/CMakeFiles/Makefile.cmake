@@ -69,6 +69,8 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/slam_OTHER_FILES.dir/DependInfo.cmake"
   "src/CMakeFiles/feature_detect.dir/DependInfo.cmake"
+  "src/CMakeFiles/joint_point_cloud.dir/DependInfo.cmake"
   "src/CMakeFiles/main.dir/DependInfo.cmake"
   "src/CMakeFiles/slamBase.dir/DependInfo.cmake"
+  "src/CMakeFiles/vo.dir/DependInfo.cmake"
   )

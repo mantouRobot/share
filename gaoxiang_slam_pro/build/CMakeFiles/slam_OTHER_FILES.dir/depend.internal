@@ -8,8 +8,14 @@ CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompil
 CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o
  ../include/slamBase.h
  /home/mantou/桌面/share/gaoxiang_slam_pro/src/feature_detect.cpp
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o
+ ../include/slamBase.h
+ /home/mantou/桌面/share/gaoxiang_slam_pro/src/joint_point_cloud.cpp
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o
  /home/mantou/桌面/share/gaoxiang_slam_pro/src/main.cpp
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o
  ../include/slamBase.h
  /home/mantou/桌面/share/gaoxiang_slam_pro/src/slamBase.cpp
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o
+ ../include/slamBase.h
+ /home/mantou/桌面/share/gaoxiang_slam_pro/src/vo.cpp

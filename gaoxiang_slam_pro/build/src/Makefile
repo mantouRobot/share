@@ -116,6 +116,20 @@ feature_detect/fast:
 .PHONY : feature_detect/fast
 
 # Convenience name for target.
+src/CMakeFiles/joint_point_cloud.dir/rule:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/joint_point_cloud.dir/rule
+.PHONY : src/CMakeFiles/joint_point_cloud.dir/rule
+
+# Convenience name for target.
+joint_point_cloud: src/CMakeFiles/joint_point_cloud.dir/rule
+.PHONY : joint_point_cloud
+
+# fast build rule for target.
+joint_point_cloud/fast:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/joint_point_cloud.dir/build.make src/CMakeFiles/joint_point_cloud.dir/build
+.PHONY : joint_point_cloud/fast
+
+# Convenience name for target.
 src/CMakeFiles/main.dir/rule:
 	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
 .PHONY : src/CMakeFiles/main.dir/rule
@@ -143,6 +157,20 @@ slamBase/fast:
 	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
 .PHONY : slamBase/fast
 
+# Convenience name for target.
+src/CMakeFiles/vo.dir/rule:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/vo.dir/rule
+.PHONY : src/CMakeFiles/vo.dir/rule
+
+# Convenience name for target.
+vo: src/CMakeFiles/vo.dir/rule
+.PHONY : vo
+
+# fast build rule for target.
+vo/fast:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/vo.dir/build.make src/CMakeFiles/vo.dir/build
+.PHONY : vo/fast
+
 feature_detect.o: feature_detect.cpp.o
 .PHONY : feature_detect.o
 
@@ -166,6 +194,30 @@ feature_detect.s: feature_detect.cpp.s
 feature_detect.cpp.s:
 	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/feature_detect.dir/build.make src/CMakeFiles/feature_detect.dir/feature_detect.cpp.s
 .PHONY : feature_detect.cpp.s
+
+joint_point_cloud.o: joint_point_cloud.cpp.o
+.PHONY : joint_point_cloud.o
+
+# target to build an object file
+joint_point_cloud.cpp.o:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/joint_point_cloud.dir/build.make src/CMakeFiles/joint_point_cloud.dir/joint_point_cloud.cpp.o
+.PHONY : joint_point_cloud.cpp.o
+
+joint_point_cloud.i: joint_point_cloud.cpp.i
+.PHONY : joint_point_cloud.i
+
+# target to preprocess a source file
+joint_point_cloud.cpp.i:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/joint_point_cloud.dir/build.make src/CMakeFiles/joint_point_cloud.dir/joint_point_cloud.cpp.i
+.PHONY : joint_point_cloud.cpp.i
+
+joint_point_cloud.s: joint_point_cloud.cpp.s
+.PHONY : joint_point_cloud.s
+
+# target to generate assembly for a file
+joint_point_cloud.cpp.s:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/joint_point_cloud.dir/build.make src/CMakeFiles/joint_point_cloud.dir/joint_point_cloud.cpp.s
+.PHONY : joint_point_cloud.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -215,6 +267,30 @@ slamBase.cpp.s:
 	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/slamBase.cpp.s
 .PHONY : slamBase.cpp.s
 
+vo.o: vo.cpp.o
+.PHONY : vo.o
+
+# target to build an object file
+vo.cpp.o:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/vo.dir/build.make src/CMakeFiles/vo.dir/vo.cpp.o
+.PHONY : vo.cpp.o
+
+vo.i: vo.cpp.i
+.PHONY : vo.i
+
+# target to preprocess a source file
+vo.cpp.i:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/vo.dir/build.make src/CMakeFiles/vo.dir/vo.cpp.i
+.PHONY : vo.cpp.i
+
+vo.s: vo.cpp.s
+.PHONY : vo.s
+
+# target to generate assembly for a file
+vo.cpp.s:
+	cd /home/mantou/桌面/share/gaoxiang_slam_pro/build && $(MAKE) -f src/CMakeFiles/vo.dir/build.make src/CMakeFiles/vo.dir/vo.cpp.s
+.PHONY : vo.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,18 +299,26 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... feature_detect"
+	@echo "... joint_point_cloud"
 	@echo "... main"
 	@echo "... rebuild_cache"
 	@echo "... slamBase"
+	@echo "... vo"
 	@echo "... feature_detect.o"
 	@echo "... feature_detect.i"
 	@echo "... feature_detect.s"
+	@echo "... joint_point_cloud.o"
+	@echo "... joint_point_cloud.i"
+	@echo "... joint_point_cloud.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... slamBase.o"
 	@echo "... slamBase.i"
 	@echo "... slamBase.s"
+	@echo "... vo.o"
+	@echo "... vo.i"
+	@echo "... vo.s"
 .PHONY : help
 
 

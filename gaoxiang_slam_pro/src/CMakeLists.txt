@@ -1,4 +1,4 @@
-find_package(PCL REQUIRED COMPONENTS common io)
+find_package(PCL REQUIRED )
 find_package(OpenCV REQUIRED)
 
 #OpenCV的头文件，库文件位置不需要再显式指出，只需要目标链接时包含
@@ -16,3 +16,9 @@ target_link_libraries(slamBase ${OpenCV_LIBS} ${PCL_LIBRARIES})
 
 add_executable(feature_detect feature_detect.cpp)
 target_link_libraries(feature_detect ${OpenCV_LIBS} slamBase)
+
+add_executable(joint_point_cloud joint_point_cloud.cpp)
+target_link_libraries(joint_point_cloud ${OpenCV_LIBS} ${PCL_LIBRARIES} slamBase)
+
+add_executable(vo vo.cpp)
+target_link_libraries(vo ${OpenCV_LIBS} ${PCL_LIBRARIES} slamBase)

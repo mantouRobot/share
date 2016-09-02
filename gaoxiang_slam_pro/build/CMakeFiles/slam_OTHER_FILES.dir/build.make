@@ -50,9 +50,32 @@ include CMakeFiles/slam_OTHER_FILES.dir/progress.make
 
 CMakeFiles/slam_OTHER_FILES:
 
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o: 
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o: ../src/joint_point_cloud.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o -c /home/mantou/桌面/share/gaoxiang_slam_pro/src/joint_point_cloud.cpp
+
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/桌面/share/gaoxiang_slam_pro/src/joint_point_cloud.cpp > CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.i
+
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/桌面/share/gaoxiang_slam_pro/src/joint_point_cloud.cpp -o CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.s
+
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o.requires:
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o.requires
+
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o.provides: CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o.requires
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o.provides.build
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o.provides
+
+CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o.provides.build: CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o
+
 CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o: 
 CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o: ../src/feature_detect.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o -c /home/mantou/桌面/share/gaoxiang_slam_pro/src/feature_detect.cpp
 
@@ -75,7 +98,7 @@ CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: 
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../src/slamBase.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o -c /home/mantou/桌面/share/gaoxiang_slam_pro/src/slamBase.cpp
 
@@ -96,9 +119,32 @@ CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.provides: CMakeFiles/slam_OTH
 
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o.provides.build: CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o
 
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o: 
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o: ../src/vo.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o -c /home/mantou/桌面/share/gaoxiang_slam_pro/src/vo.cpp
+
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/桌面/share/gaoxiang_slam_pro/src/vo.cpp > CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.i
+
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/桌面/share/gaoxiang_slam_pro/src/vo.cpp -o CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.s
+
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o.requires:
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o.requires
+
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o.provides: CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o.provides.build
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o.provides
+
+CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o.provides.build: CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o
+
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o: 
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o -c /home/mantou/桌面/share/gaoxiang_slam_pro/src/main.cpp
 
@@ -121,7 +167,7 @@ CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o.provides.build: CMakeFiles/slam_O
 
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: 
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
@@ -144,7 +190,7 @@ CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompil
 
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o: 
 CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o: CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o   -c /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c
 
