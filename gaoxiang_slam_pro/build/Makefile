@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro
+CMAKE_SOURCE_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mantou/桌面/share/gaoxiang_slam_pro/build
+CMAKE_BINARY_DIR = /home/mantou/Desktop/share/gaoxiang_slam_pro/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/桌面/share/gaoxiang_slam_pro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -165,6 +165,19 @@ slamBase: cmake_check_build_system
 slamBase/fast:
 	$(MAKE) -f src/CMakeFiles/slamBase.dir/build.make src/CMakeFiles/slamBase.dir/build
 .PHONY : slamBase/fast
+
+#=============================================================================
+# Target rules for targets named slam_end
+
+# Build rule for target.
+slam_end: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 slam_end
+.PHONY : slam_end
+
+# fast build rule for target.
+slam_end/fast:
+	$(MAKE) -f src/CMakeFiles/slam_end.dir/build.make src/CMakeFiles/slam_end.dir/build
+.PHONY : slam_end/fast
 
 #=============================================================================
 # Target rules for targets named vo
@@ -323,6 +336,30 @@ src/slamBase.cpp.s:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.s
 .PHONY : src/slamBase.cpp.s
 
+src/slam_end.o: src/slam_end.cpp.o
+.PHONY : src/slam_end.o
+
+# target to build an object file
+src/slam_end.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slam_end.cpp.o
+.PHONY : src/slam_end.cpp.o
+
+src/slam_end.i: src/slam_end.cpp.i
+.PHONY : src/slam_end.i
+
+# target to preprocess a source file
+src/slam_end.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slam_end.cpp.i
+.PHONY : src/slam_end.cpp.i
+
+src/slam_end.s: src/slam_end.cpp.s
+.PHONY : src/slam_end.s
+
+# target to generate assembly for a file
+src/slam_end.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slam_end.cpp.s
+.PHONY : src/slam_end.cpp.s
+
 src/vo.o: src/vo.cpp.o
 .PHONY : src/vo.o
 
@@ -360,6 +397,7 @@ help:
 	@echo "... joint_point_cloud"
 	@echo "... main"
 	@echo "... slamBase"
+	@echo "... slam_end"
 	@echo "... vo"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o"
 	@echo "... CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i"
@@ -379,6 +417,9 @@ help:
 	@echo "... src/slamBase.o"
 	@echo "... src/slamBase.i"
 	@echo "... src/slamBase.s"
+	@echo "... src/slam_end.o"
+	@echo "... src/slam_end.i"
+	@echo "... src/slam_end.s"
 	@echo "... src/vo.o"
 	@echo "... src/vo.i"
 	@echo "... src/vo.s"

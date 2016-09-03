@@ -59,8 +59,6 @@ void extractKeyPointAndDesp(FramePair &frame_pair, std::string detector, std::st
 
 ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, CameraIntrinsicParams &camera)
 {
-
-
     //粗匹配
     std::vector<cv::DMatch> matches;
     cv::FlannBasedMatcher matcher;
@@ -82,7 +80,14 @@ ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, Camer
         if(matches[i].distance < good_match_threshold*min_dist)
             good_matches.push_back(matches[i]);
     }
-    std::cout << "good matches: " <<good_matches.size() << std::endl;       
+
+    ResultOfPnP result;
+    std::cout << "good matches: " <<good_matches.size() << std::endl;
+    if(good_matches.size() <= 5)
+    {
+        result.inliers = -1;
+        return result;
+    }
     //PnP
     std::vector<cv::Point3f> pts_obj;
     std::vector<cv::Point2f> pts_img;
@@ -110,7 +115,7 @@ ResultOfPnP estimateMotion(FramePair &frame_pair1, FramePair &frame_pair2, Camer
     cv::Mat rvec, tvec, inliers;
     cv::solvePnPRansac(pts_obj, pts_img, cameraMatrix, cv::Mat(), rvec, tvec, false, 100, 1.0, 100, inliers);
 
-    ResultOfPnP result;
+
     result.rvec = rvec;
     result.tvec = tvec;
     result.inliers = inliers.rows;

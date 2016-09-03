@@ -16,6 +16,9 @@ CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../include/slamBase.h
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../src/slamBase.cpp
 
+CMakeFiles/slam_OTHER_FILES.dir/src/slam_end.cpp.o: ../include/slamBase.h
+CMakeFiles/slam_OTHER_FILES.dir/src/slam_end.cpp.o: ../src/slam_end.cpp
+
 CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o: ../include/slamBase.h
 CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o: ../src/vo.cpp
 

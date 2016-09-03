@@ -38,7 +38,33 @@ pcl/visualization/cloud_viewer.h
 pcl/filters/voxel_grid.h
 -
 
-/home/mantou/桌面/share/gaoxiang_slam_pro/src/slamBase.cpp
+/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slam_end.cpp
+iostream
+-
+fstream
+-
+sstream
+-
 slamBase.h
+/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.h
+g2o/types/slam3d/types_slam3d.h
+-
+g2o/core/sparse_optimizer.h
+-
+g2o/core/block_solver.h
+-
+g2o/core/factory.h
+-
+g2o/core/optimization_algorithm_factory.h
+-
+g2o/core/optimization_algorithm_gauss_newton.h
+-
+g2o/solvers/csparse/linear_solver_csparse.h
+-
+g2o/core/robust_kernel.h
+-
+g2o/core/robust_kernel_factory.h
+-
+g2o/core/optimization_algorithm_levenberg.h
 -
 

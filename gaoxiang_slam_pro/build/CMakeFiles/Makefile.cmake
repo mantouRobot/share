@@ -11,6 +11,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/2.8.12.2/CMakeCCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeSystem.cmake"
+  "../cmake_modules/FindCSparse.cmake"
+  "../cmake_modules/FindG2O.cmake"
   "../src/CMakeLists.txt"
   "/usr/lib/vtk-5.8/CMake/vtkMakeInstantiator.cmake"
   "/usr/lib/vtk-5.8/UseVTK.cmake"
@@ -72,5 +74,6 @@ SET(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/joint_point_cloud.dir/DependInfo.cmake"
   "src/CMakeFiles/main.dir/DependInfo.cmake"
   "src/CMakeFiles/slamBase.dir/DependInfo.cmake"
+  "src/CMakeFiles/slam_end.dir/DependInfo.cmake"
   "src/CMakeFiles/vo.dir/DependInfo.cmake"
   )

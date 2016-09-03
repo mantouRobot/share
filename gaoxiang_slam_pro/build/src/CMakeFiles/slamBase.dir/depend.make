@@ -385,4 +385,21 @@ src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/vtk-5.8/vtkstd/new
 src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/vtk-5.8/vtkstd/string
 src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/vtk-5.8/vtkstd/utility
 src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/include/vtk-5.8/vtkstd/vector
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/calib3d/calib3d.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/affine.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/core.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/core_c.h
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/eigen.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/mat.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/operations.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/types_c.h
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/core/version.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/flann/config.h
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/flann/defines.h
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/flann/miniflann.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/nonfree/features2d.hpp
+src/CMakeFiles/slamBase.dir/slamBase.cpp.o: /usr/local/include/opencv2/nonfree/nonfree.hpp
 
