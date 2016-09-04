@@ -8,6 +8,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o"
   "CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o"
   "CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o"
+  "CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

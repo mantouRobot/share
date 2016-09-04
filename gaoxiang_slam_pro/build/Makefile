@@ -312,6 +312,30 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/slam.o: src/slam.cpp.o
+.PHONY : src/slam.o
+
+# target to build an object file
+src/slam.cpp.o:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o
+.PHONY : src/slam.cpp.o
+
+src/slam.i: src/slam.cpp.i
+.PHONY : src/slam.i
+
+# target to preprocess a source file
+src/slam.cpp.i:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.i
+.PHONY : src/slam.cpp.i
+
+src/slam.s: src/slam.cpp.s
+.PHONY : src/slam.s
+
+# target to generate assembly for a file
+src/slam.cpp.s:
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.s
+.PHONY : src/slam.cpp.s
+
 src/slamBase.o: src/slamBase.cpp.o
 .PHONY : src/slamBase.o
 
@@ -414,6 +438,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/slam.o"
+	@echo "... src/slam.i"
+	@echo "... src/slam.s"
 	@echo "... src/slamBase.o"
 	@echo "... src/slamBase.i"
 	@echo "... src/slamBase.s"

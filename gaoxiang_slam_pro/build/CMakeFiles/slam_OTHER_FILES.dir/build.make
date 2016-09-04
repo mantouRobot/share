@@ -234,6 +234,29 @@ CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o.provides: CMakeFiles/sl
 
 CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o.provides.build: CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o
 
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o: 
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o: ../src/slam.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o"
+	g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o -c /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slam.cpp
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.i"
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slam.cpp > CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.i
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.s"
+	g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slam.cpp -o CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.s
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o.requires:
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o.requires
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o.provides: CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o.requires
+	$(MAKE) -f CMakeFiles/slam_OTHER_FILES.dir/build.make CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o.provides.build
+.PHONY : CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o.provides
+
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o.provides.build: CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o
+
 slam_OTHER_FILES: CMakeFiles/slam_OTHER_FILES
 slam_OTHER_FILES: CMakeFiles/slam_OTHER_FILES.dir/build.make
 .PHONY : slam_OTHER_FILES

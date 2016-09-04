@@ -13,6 +13,9 @@ CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o: ../src/joint_point_
 
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o: ../src/main.cpp
 
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o: ../include/slamBase.h
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o: ../src/slam.cpp
+
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../include/slamBase.h
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o: ../src/slamBase.cpp
 

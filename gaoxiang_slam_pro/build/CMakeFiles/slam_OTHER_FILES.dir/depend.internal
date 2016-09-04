@@ -13,6 +13,9 @@ CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o
  /home/mantou/Desktop/share/gaoxiang_slam_pro/src/joint_point_cloud.cpp
 CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o
  /home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp
+CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o
+ ../include/slamBase.h
+ /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slam.cpp
 CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o
  ../include/slamBase.h
  /home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp

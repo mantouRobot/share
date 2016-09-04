@@ -24,3 +24,7 @@
 		ss << "rgb" << i++ << ".png";
 		ss >> s;
 7. Qtcreator有时不能弹出补全
+8. 有时Qtcreator的make不能编译或者链接通过，而终端make可以编译链接通过
+ 	 在QtCreator编辑包含头文件的时候，未防止多个源而选择错误，可以在ide中确认头文件路径
+	 /usr/local/lib/libg2o_types_slam3d.so: undefined reference to `g2o::opengl::drawPoint(float)'`
+	 cmake可以编译链接通过，qt不行

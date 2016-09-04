@@ -13,6 +13,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/feature_detect.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/feature_detect.cpp.o"
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/joint_point_cloud.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/joint_point_cloud.cpp.o"
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/main.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/main.cpp.o"
+  "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slam.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/slam.cpp.o"
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slamBase.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/slamBase.cpp.o"
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/slam_end.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/slam_end.cpp.o"
   "/home/mantou/Desktop/share/gaoxiang_slam_pro/src/vo.cpp" "/home/mantou/Desktop/share/gaoxiang_slam_pro/build/CMakeFiles/slam_OTHER_FILES.dir/src/vo.cpp.o"

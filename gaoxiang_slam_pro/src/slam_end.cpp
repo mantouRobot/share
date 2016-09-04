@@ -78,7 +78,7 @@ int main()
 
     int last_index = curr_index;
 
-    for(curr_index = start_index + 1; curr_index < end_index; curr_index++)
+    for(curr_index = start_index + 1; curr_index < 180; curr_index++)
     {
         cout << "Reading frame " << curr_index << endl;
         FramePair curr_frame = readFrame(curr_index);
@@ -124,8 +124,8 @@ int main()
         //将此边加入图中
         global_optimizer.addEdge(edge);
 
-//        if(is_visualize)
-//            viewer.showCloud(cloud);
+        if(is_visualize)
+            viewer.showCloud(cloud);
         last_frame = curr_frame;
         last_index = curr_index;
     }
