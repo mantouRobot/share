@@ -45,11 +45,13 @@ int main()
     int start_index, end_index;
     double voxel_grid;
     int min_good_match, min_inliers;
-    double max_norm;
+    double max_norm, max_norm_lp;
     string detector, descriptor;
     bool is_visualize;
     double keyframe_threshold;
     bool check_loop_closure;
+		int nearby_loops, random_loops;
+		
     cv::FileStorage param("../param/param.yaml", cv::FileStorage::READ);
 
     camera.cx = (double)param["cx"];
@@ -63,6 +65,7 @@ int main()
     min_good_match = (int)param["min_good_match"];
     min_inliers = (int)param["min_inliers"];
     max_norm = (double)param["max_norm"];
+		max_norm_lp = (double)param["max_norm_lp"];
     detector = (string)param["detector"];
     descriptor = (string)param["descriptor"];
     is_visualize = (int)param["visualize_pointcloud"];
@@ -141,50 +144,6 @@ int main()
     }
 
     //位姿图构建完毕，开始优化
-        //inliers不够，放弃该帧
-        if(result.inliers < min_inliers)
-            continue;
-        //评估运动范围是否太大
-        double norm = normofTransform(result.rvec, result.tvec);
-        if(norm >= max_norm)
-            continue;
-        Eigen::Isometry3d T = cvMat2Eigen(result.rvec, result.tvec);
-        cout << "T=" << T.matrix() << endl;
-
-        //cloud = joinPointCloud(cloud, curr_frame, T, camera, voxel_grid);
-
-        //向g2o中增加这个顶点与上一帧联系的边
-        //顶点部分
-        //顶点只需设定id即可
-        g2o::VertexSE3 *v = new g2o::VertexSE3();
-        v->setId(curr_index);
-        v->setEstimate(Eigen::Isometry3d::Identity());
-        global_optimizer.addVertex(v);
-        //边部分
-        g2o::EdgeSE3 *edge = new g2o::EdgeSE3();
-        //连接此边的两个顶点id
-        edge->vertices()[0] = global_optimizer.vertex(last_index);
-        edge->vertices()[1] = global_optimizer.vertex(curr_index);
-        //信息矩阵
-        Eigen::Matrix<double, 6, 6> infomation = Eigen::Matrix<double, 6, 6>::Identity();
-        //信息矩阵是协方差矩阵的逆，表示我们对边的精度的预先估计
-        //因为pose是6D的，信息矩阵是6*6的阵，假设位置和角度的估计精度均为0.1且相互独立，
-        //那么协方差则为对角为0.01的矩阵，信息阵则为100的矩阵
-        infomation(0,0) = infomation(1,1) = infomation(2,2) = 100;
-        infomation(3,3) = infomation(4,4) = infomation(5,5) = 100;
-        //也可以将角度设大一些，表示对角度的估计更加准确
-        edge->setInformation(infomation);
-        //边的估计即是pnp求解之结果
-        edge->setMeasurement(T);
-        //将此边加入图中
-        global_optimizer.addEdge(edge);
-
-        if(is_visualize)
-            viewer.showCloud(cloud);
-        last_frame = curr_frame;
-        last_index = curr_index;
-    }
-    //优化所有边
     cout << "optimizing pose graph, vertices: " << global_optimizer.vertices().size() << endl;
     global_optimizer.save("../data/result_before.g2o");
     global_optimizer.initializeOptimization();
@@ -192,7 +151,44 @@ int main()
     global_optimizer.save("../data/result_after.g2o");
     cout << "Optimization done." << endl;
 
-    global_optimizer.clear();
+		//根据优化得到的节点位姿，拼接点云地图
+		cout << "saving the point cloud map..." << endl;
+		pcl::PointCloud<pcl::PointXYZRGBA>::Ptr output(new pcl::PointCloud<pcl::PointXYZRGBA>);//全局整个点云地图
+		pcl::PointCloud<pcl::PointXYZRGBA>::Ptr tmp(new pcl::PointCloud<pcl::PointXYZRGBA>);
+
+		pcl::VoxelGrid<pcl::PointXYZRGBA> voxel;//网格滤波器，调整地图分辨率
+		pcl::PassThrough<pcl::PointXYZRGBA> pass;//z方向区间滤波器，去点深度相机远点
+
+		pass.setFilterFiledName("z");
+		pass.setFilterLimits(0.0, 4.0);//4m以上就不要了
+
+		voxel.setLeafSize(grid_size, grid_size, grid_size);
+
+		for(size_t i = 0; i < key_frames.size(); i++)
+		{
+			//从g2o里取出一帧
+			g2o::VertexSE3 *vertex = dynamic_case<g2o::VertexSE3*>(global_optimizer.vertex(key_frames[i].frameID));
+			Eigen::Isometry3d pose = vertex->estimate();//该帧优化后的位姿
+			pcl::PointCloud<pcl::PointXYZRGBA>::Ptr new_cloud = image2PointCloud(key_frames[i].rgb, key_frames[i].depth, camera);//转成点云
+			//对该帧点云滤波
+			voxel.setInputCloud(new_cloud);
+			voxel.filter(*tmp);
+			pass.setInputCloud(tmp);
+			pass.filter(*new_cloud);
+			//把点云变换后加入全局地图中
+			pcl::transformPointCloud(*new_cloud, *tmp, pose.matrix());
+			*output += *tmp;
+			tmp->clear();
+			new_cloud->clear();
+		}
+
+		voxel.setInputCloud(output);
+		voxel.filter(*tmp);
+		//存储
+		pcl::io::savePCDFile("../data/result.pcd", *tmp);
+
+		cout << "Final map is saved." << endl;
+		global_optimizer.clear();
 
     return 0;
 }
@@ -217,4 +213,115 @@ FramePair readFrame( int index )
     result.frameID = index;
     return result;
 }
+
+CheckResult checkKeyframes(FramePair &f1, FramePair &f2, g2o::SparseOptimizer &opti, bool is_loops)
+{
+		static g2o::RobustKernel *robust_kernel = g2o::RobustKernelFactory::instance()->construct("Cauchy");
+		ResultOfPnp result = estimateMotion(f1, f2, camera);
+		//比较f1 f2
+		if(result.inliers < min_inliers) //inliers不够，放弃该帧
+				return NOT_MATCHED;
+		//计算运动范围是否太大
+		double norm = normofTransform(result.rvec, result.tvec);
+		if(is_loops == false)//表示当前是关键帧确定，是与前一帧匹配
+		{
+				if(norm > max_norm)
+						return TOO_FAR_AWAY;
+		}
+		else//表示当前是回环检测，是与以前帧匹配，运动阈值改变
+		{
+				if(norm > max_norm_lp)
+						return TOO_FAR_AWAY;
+		}
+
+		if(norm < keyframe_shreshold)
+				return TOO_CLOSE;
+		//到这已确定为关键帧
+		//如果是上一帧的匹配，则需添加顶点，否则只需添加边
+		if(is_loops == false)
+		{
+				g2o::VertexSE3 *v = new g2o::VertexSE3();
+				v->setId(f2.frameID);
+				v->setEstimate(Eigen::Isometry3d::Identity());
+				opti.addVertex(v);
+		}
+		//添加边
+		g2o::EdgeSE3 *edge = new g2o::EdgeSE3();
+		//连接此边的两个顶点id
+		edge->vertices()[0] = opti.vertex(f1.frameID);
+		edge->vertices()[1] = opti.vertex(f2.frameID);
+		dege->setRobustKernel(robust_kernel);
+		//信息矩阵
+		Eigen::Matrix<double, 6, 6> information = Eigen::Matrix<double, 6, 6>::Identity();
+		information(0,0) = information(1,1) = information(2,2) = 100;
+		information(3,3) = information(4,4) = information(5,5) = 100;
+		edge->setInformation(information);
+		//边的估计即是pnp求解之结果
+		Eigen::Isometry3d T = cvMat2Eigen(result.rvec, result.tvec);
+		edge->setMeasurement(T.inverse());
+		//将此边加入图中
+		opti.addEdge(edgeL);
+		return KEYFRAME;
+}
+
+void checkNearbyLoops(vector<FramePair> &frames, FramePair &curr_frame, g2o::SparseOptimizer &opti)
+{
+		static int nearby_loops = 5;
+		if(frames.size() < nearby_loops)
+		{
+				for(size_t i = 0; i < frames.size(); i++)
+				{
+						checkKeyframes(frames[i], curr_frame, opti, true);
+				}
+		}
+		else
+		{
+				for(size_t i = frames.size() - nearby_loops; i < frames.size(); i++)
+				{
+						checkKeyframes(frames[i], curr_frame, opti, true);
+				}
+		}
+}
+
+void checkRandomLoops(vector<FramePair> &frames, FramePair &curr_frame, g2o::SparseOptimizer &opti)
+{
+		static random_loops = 5;
+		srand((unsigned int) time(NULL));
+		if(frames.size() < random_loops)
+		{
+				for(size_t i = 0; i < frames.size(); i++)
+				{
+						checkKeyframes(frames[i], curr_frame, opti, true);
+				}
+		}
+		else
+		{
+				for(size_t i = 0; i < random_loops; i++)
+				{
+						int index = rand()%frames.size();
+						checkKeyframes(frames[index], curr_frame, opti, true);
+				}
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
