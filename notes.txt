@@ -28,3 +28,7 @@
  	 在QtCreator编辑包含头文件的时候，未防止多个源而选择错误，可以在ide中确认头文件路径
 	 /usr/local/lib/libg2o_types_slam3d.so: undefined reference to `g2o::opengl::drawPoint(float)'`
 	 cmake可以编译链接通过，qt不行
+9. boost::bind(&fun)函数的参数在ros下一般需要是常量指针才行
+10.  cmake error: Could not open file for write in copy operation.
+			没有权限，可能是安装的时候是sudo。 可以sudo chown -R username ./
+11.  有时候qtcreator不能有效解析ws文件；同时，在qtcreator跳转时注意跳转到哪个ws下的文件了
