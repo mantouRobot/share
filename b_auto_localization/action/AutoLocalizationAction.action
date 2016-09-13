@@ -1,7 +1,0 @@
-#goal definition
-geometry_msgs/Pose target_pose
----
-#result definition
-actionlib_msgs/GoalStatus status
----
-#feedback
