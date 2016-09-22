@@ -35,3 +35,4 @@
 12.  const指针或变量不可更改：error: passing ‘const _stamp_type {aka const ros::Time}’ as ‘this’ argument of ‘ros::Time& ros::Time::operator=(const ros::Time&)’ discards qualifiers [-fpermissive]
      goal->target_pose.target_pose.header.stamp = ros::Time::now();
 13. rviz有时不能加载一些可视基类，有可能是由于～/.rviz的配置文件需要删除。
+14. rviz,rqt等一些gui可能存在配置文件，即使卸载也还在，发生问题需要考虑一下这些配置文件。
