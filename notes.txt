@@ -39,3 +39,5 @@
 15. tf2有对各种库的支持，方便的各种转换(kdl,eigen,bullet,geometry_msgs)
     tf2独立于ros,因此有tf2_ros.h
 16. 参数服务器是跟随core的，注意其是否更新
+17. 多个工作空间存在相互依赖和包同名的时候要小心source，不妨把无关build devel 删除，防止出现rospack profile依然存在的莫名问题
+    否则有包编译不产生对应文件各种麻烦问题。
