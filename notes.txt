@@ -39,3 +39,5 @@
 15. tf2有对各种库的支持，方便的各种转换(kdl,eigen,bullet,geometry_msgs)
     tf2独立于ros,因此有tf2_ros.h
 16. 参数服务器是跟随core的，注意其是否更新
+17. 注意有时候需要删除build devel source
+18. 一般情况下一个节点的所有回调共用一个线程，所以某个回调阻塞其他回调不能进入。
