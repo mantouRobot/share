@@ -1,0 +1,3 @@
+<library path="lib/libb_orbcamera_nodelet">
+  	<class name="b_orbcamera/OrbbecCameraNodelet" type="b_orbcamera::OrbbecCameraNodelet" base_class_type="nodelet::Nodelet"/>  
+</library>

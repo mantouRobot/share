@@ -1,0 +1,32 @@
+<!-- Register a depth camera with an RGB camera -->
+<!-- TODO: Should be able to remap namespaces in nodelet load with current roscpp -->
+<launch>
+
+  <arg name="camera" default="camera" />
+  
+  <arg name="respawn" default="false" />
+  <arg     if="$(arg respawn)" name="bond" value="" />
+  <arg unless="$(arg respawn)" name="bond" value="--no-bond" />
+   
+  <group ns="$(arg camera)">
+  
+	<!-- Start nodelet manager -->
+	<arg name="manager" value="$(arg camera)_nodelet_manager" />
+	<arg name="debug" default="false" /> <!-- Run manager in GDB? -->
+	<arg name="num_worker_threads" default="4" /> 
+	<include file="$(find rgbd_launch)/launch/includes/manager.launch.xml">
+		<arg name="name" value="$(arg manager)" />
+		<arg name="num_worker_threads"  value="$(arg num_worker_threads)" />
+	</include>
+	 
+    <node pkg="nodelet" type="nodelet" name="rgb_depth_regist_combine"
+          args="load depth_image_proc/point_cloud_xyzrgb $(arg manager) $(arg bond)"
+          respawn="$(arg respawn)">
+      <!-- Explicit topic remappings, shouldn't need all of these -->
+      <remap from="rgb/camera_info"             to="/b_usb_cam/camera_info" />
+      <remap from="rgb/image_rect_color"        to="/b_usb_cam/image_raw" />
+      <remap from="depth_registered/image_rect" to="/camera/depth_regist/image" />
+    </node>
+
+  </group> <!-- camera -->
+</launch>
