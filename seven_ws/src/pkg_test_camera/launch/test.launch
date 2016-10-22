@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="nodelet_test_camera" args="load pkg_test_camera/TestCameraNodelet camera" output="screen"/>
+</launch>
