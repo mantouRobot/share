@@ -52,15 +52,13 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   Cout.srv
+ )
 
 ## Generate actions in the 'action' folder
  add_action_files(
-#   DIRECTORY action
    FILES   Cout.action
  )
 
@@ -101,7 +99,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
+	#INCLUDE_DIRS include
 #  LIBRARIES pkg_test_actionlib
   CATKIN_DEPENDS actionlib actionlib_msgs roscpp
 #  DEPENDS system_lib
@@ -114,7 +112,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 
- include_directories(include)
+include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
@@ -131,12 +129,14 @@ include_directories(
 
 ## Declare a C++ executable
  add_executable(server_node src/server_node.cpp)
- add_executable(client_node src/client_node)
+ add_executable(client_node src/client_node.cpp)
+ add_executable(embed_srv_node src/embed_srv_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
  add_dependencies(server_node  ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  add_dependencies( client_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(embed_srv_node  ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(server_node
@@ -145,7 +145,9 @@ include_directories(
 target_link_libraries( client_node
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries( embed_srv_node
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
