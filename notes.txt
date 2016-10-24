@@ -44,3 +44,6 @@
 18. 注意有时候需要删除build devel source
 19. 一般情况下一个节点的所有回调共用一个线程，所以某个回调阻塞其他回调不能进入。
 20. make:no rule to make target,可能是因为build中的CMakeCache文件未删除
+21. boost::bind call error, no match.除保证bind语法正确，同时确保回调函数传参正确。
+    as_(nh_, "turn_body", boost::bind(&myClass::executeCb, this, _1), false)
+    void executeCb(const common::TurnBodyDegreeGoalConstPtr &goal);
