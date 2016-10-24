@@ -11,9 +11,6 @@ public:
   actionlib::SimpleActionClient<pkg_test_actionlib::CoutAction> embed_ac_;
   boost::mutex embed_ac_lock_;
 
-  pkg_test_actionlib::CoutGoal goal_;
-  pkg_test_actionlib::CoutResult result_;
-
   CoutActionServer(ros::NodeHandle nh) :
     nh_(nh),
     embed_ac_("embed_server", true),

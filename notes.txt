@@ -47,3 +47,11 @@
 21. boost::bind call error, no match.除保证bind语法正确，同时确保回调函数传参正确。
     as_(nh_, "turn_body", boost::bind(&myClass::executeCb, this, _1), false)
     void executeCb(const common::TurnBodyDegreeGoalConstPtr &goal);
+22. cv::Mat mat; 既可以在定义时构造，也可以通过creat(row,col)来改造。像素的遍历三种方法：
+			1. uchar *data mat.ptr<uchar>(row);
+				 data[j] = ...通过获取行首指针遍历像素
+			2. mat.at<uchar>(i, j) = tmp, 通过at操作
+			3. 迭代起
+		注意，成员变量data是整个方矩阵的起始地址，不可以通过它遍历，因为不是线性存储
+23. imshow("window_name", mat)后一般要要waitKey(1000)
+
