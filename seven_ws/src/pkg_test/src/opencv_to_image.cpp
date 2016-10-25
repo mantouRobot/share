@@ -14,14 +14,32 @@ int main(int argc, char** argv)
     cv::Mat frame;
     sensor_msgs::Image image;
 
-    ros::Rate r(20);
+
+    ros::Rate r(1);
     while(ros::ok())
     {
-        capture >>  frame;
+//        capture >>  frame;
+        frame.create(480, 640, CV_8UC1);
+        for(int i = 0; i < 480; i++){
+          for(int j = 0; j < 640; j++){
+            frame.at<uchar>(i, j) = 127;
+          }
+        }
+//        cv::cvtColor(frame, frame, CV_BGR2GRAY);
+        cv::Mat mat;
+        cv::Mat element = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(55, 55));
+        cv::erode(frame, mat, element);
+        cv::imshow("raw", frame);
+        cv::waitKey(10);
+//        cv::Mat mat = frame.clone();
+
+        ROS_INFO("!!!");
+//        std::cout << mat << std::endl;
         cv_bridge::CvImage cv_image;
         cv_image.header.stamp = ros::Time::now();
         cv_image.encoding = sensor_msgs::image_encodings::RGB8;
         cv_image.image = frame;
+//        cv::imshow("raw", cv_image.image);
         pub.publish(cv_image.toImageMsg());
         r.sleep();
         ros::spinOnce();

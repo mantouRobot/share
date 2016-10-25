@@ -155,6 +155,9 @@ target_link_libraries(opencv_to_image ${OpenCV_LIBS} ${catkin_LIBRARIES})
 add_executable(tf_tf2_node src/tf_tf2.cpp)
 target_link_libraries(tf_tf2_node ${catkin_LIBRARIES})
 
+add_executable(opencv_functions src/opencv_functions.cpp)
+target_link_libraries(opencv_functions ${OpenCV_LIBS} ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
