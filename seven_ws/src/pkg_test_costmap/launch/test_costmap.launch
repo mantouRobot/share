@@ -1,0 +1,14 @@
+<launch>
+<!--  静态层需要-->
+<!--nav_msgs/Occupancy /map-->
+<!--tf: map --> base_footprint-->
+  <node pkg="map_server" type="map_server" name="map_server" args="/home/spark/test.yaml"/>
+  <include file="$(find nx_description)/launch/bigi_description.launch"/>
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 0 0 0 0 1 map base_footprint 100"/>
+<!--  障碍层需要/scan-->
+  <include file="$(find b_orbcamera)/launch/b_orbcamera_nodelet.launch"/>
+
+  <node pkg="pkg_test_costmap" type="test_costmap_node" name="test_costmap_node" output="screen">
+    <rosparam file="$(find pkg_test_costmap)/param/global_costmap_params.yaml" command="load"/>
+  </node>
+</launch>

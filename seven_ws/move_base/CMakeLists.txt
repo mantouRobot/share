@@ -13,7 +13,7 @@ find_package(catkin REQUIRED
         nav_core
         tf
 )
-find_package(Eigen REQUIRED)
+find_package(Eigen3 REQUIRED)
 add_definitions(${EIGEN_DEFINITIONS})
 
 # dynamic reconfigure

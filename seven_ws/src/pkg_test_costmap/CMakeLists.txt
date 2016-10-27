@@ -127,16 +127,16 @@ include_directories(
 # add_dependencies(pkg_test_costmap ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(pkg_test_costmap_node src/pkg_test_costmap_node.cpp)
+ add_executable(test_costmap_node src/test_costmap.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(pkg_test_costmap_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(test_costmap_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(pkg_test_costmap_node
-#   ${catkin_LIBRARIES}
-# )
+ target_link_libraries(test_costmap_node
+   ${catkin_LIBRARIES}
+ )
 
 #############
 ## Install ##
