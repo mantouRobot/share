@@ -2,7 +2,7 @@
 <!--  静态层需要-->
 <!--nav_msgs/Occupancy /map-->
 <!--tf: map --> base_footprint-->
-  <node pkg="map_server" type="map_server" name="map_server" args="/home/spark/test.yaml"/>
+  <node pkg="map_server" type="map_server" name="map_server" args="/home/mantou/test.yaml"/>
   <include file="$(find nx_description)/launch/bigi_description.launch"/>
   <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 0 0 0 0 1 map base_footprint 100"/>
 <!--  障碍层需要/scan-->
