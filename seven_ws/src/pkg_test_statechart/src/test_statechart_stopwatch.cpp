@@ -1,182 +1,99 @@
-//#include <boost/statechart/event.hpp>
-//#include <boost/statechart/state_machine.hpp>
-//#include <boost/statechart/simple_state.hpp>
-//#include <boost/statechart/transition.hpp>
+/***************************************
+主体思想是状态机》大状态》小状态
+状态机提供和程序其他部分的接口
+大状态管理小状态的公共数据
+state_cast由状态机调用，返回当前状态的引用
+context由当前运行的小状态调用，返回大状态
+另外，通过纯虚函数实现基类的引用指向派生类对象
+***************************************/
 
-//namespace sc = boost::statechart;
-
-//struct EvStartStop : sc::event< EvStartStop > {};
-//struct EvReset : sc::event< EvReset > {};
-
-//struct Active;
-//struct StopWatch : sc::state_machine< StopWatch, Active > {};
-
-//struct Stopped;
-
-//// The simple_state class template accepts up to four parameters:
-//// - The third parameter specifies the inner initial state, if
-////   there is one. Here, only Active has inner states, which is
-////   why it needs to pass its inner initial state Stopped to its
-////   base
-//// - The fourth parameter specifies whether and what kind of
-////   history is kept
-
-//// Active is the outermost state and therefore needs to pass the
-//// state machine class it belongs to
-////大状态里有两个小状态，大状态定义时指定大状态的初始状态
-//struct Active : sc::simple_state< Active, StopWatch, Stopped >
-//{
-//  typedef sc::transition< EvReset, Active > reactions;
-//};
-
-//// Stopped and Running both specify Active as their Context,
-//// which makes them nested inside Active
-//struct Running : sc::simple_state< Running, Active >
-//{
-//  typedef sc::transition< EvStartStop, Stopped > reactions;
-//};
-
-//struct Stopped : sc::simple_state< Stopped, Active >
-//{
-//  typedef sc::transition< EvStartStop, Running > reactions;
-//};
-
-//// Because the context of a state must be a complete type (i.e.
-//// not forward declared), a machine must be defined from
-//// "outside to inside". That is, we always start with the state
-//// machine, followed by outermost states, followed by the direct
-//// inner states of outermost states and so on. We can do so in a
-//// breadth-first or depth-first way or employ a mixture of the
-//// two.
-
-//int main()
-//{
-//  StopWatch myWatch;
-//  myWatch.initiate();
-//  myWatch.process_event( EvStartStop() );
-//  myWatch.process_event( EvStartStop() );
-//  myWatch.process_event( EvStartStop() );
-//  myWatch.process_event( EvReset() );
-//  return 0;
-//}
-
-
+#include <boost/statechart/state_machine.hpp>
+#include <boost/statechart/simple_state.hpp>
+#include <boost/statechart/event.hpp>
+#include <boost/statechart/transition.hpp>
 #include <iostream>
+
 #include <ctime>
+namespace  sc = boost::statechart;
 
-#include "boost/statechart/state_machine.hpp"
-#include "boost/statechart/simple_state.hpp"
-#include "boost/statechart/transition.hpp"
-#include "boost/statechart/event.hpp"
+struct Running;
+struct Active;
+struct Stopped;
 
-namespace sc = boost::statechart;
+//定义事件
+struct EvReset : sc::event<EvReset>{};
+struct EvStartStop : sc::event<EvStartStop>{};
 
-//定义事件    《根据事件 切换 状态》
-class EvtStartStop : public sc::event< EvtStartStop > {};
-class EvtReset : public sc::event< EvtReset > {};
-class EvtGo : public sc::event< EvtGo > {};
-
-class MainState;
-class StopState;
-class RunState;
-class TwoState;
-
-//定义状态机                             初始化状态 MainState
-class Machine : public sc::state_machine< Machine, MainState > {};
-
-//定义 MainState 状态 ， 它属于Machine， 它的子状态为 StopState
-class MainState : public sc::simple_state< MainState, Machine, StopState >
+//定义状态机
+//基类的引用可以指向派生类
+struct IElapsedTime
 {
-public:
-    typedef sc::transition< EvtReset, MainState > reactReset; //状态切换
-    typedef sc::transition< EvtGo, TwoState > reactGo;            //状态切换
-
-    typedef boost::mpl::list< reactReset, reactGo > reactions;  //reactions 切不可拼写错误
-    //一个状态可以定义任意数量的动作。这就是为什么当多于一个时，我们不得不将它们放到一个mpl::list<> 里。
-
-    MainState(void)
-    {
-        std::cout<<"Enter MainState"<<std::endl;
-        mTime = 0;
-    }
-
-    ~MainState(void)
-    {
-        std::cout<<"Exit MainState"<<std::endl;
-    }
-
-    double mTime;
+  virtual double ElapsedTime() const = 0;
 };
 
-
-// 该状态属于无用状态，用于测试mpl::list的多transition用法
-class TwoState : public sc::simple_state< TwoState, Machine >
+struct StopWatch : sc::state_machine<StopWatch, Active>
 {
-public:
-    typedef sc::transition< EvtGo, MainState > reactions; //状态切换
-
-    TwoState(void)
-    {
-        std::cout<<"Enter TwoState"<<std::endl;
-    }
-
-    ~TwoState(void)
-    {
-        std::cout<<"Exit TwoState"<<std::endl;
-    }
+  //state_cast返回指定状态的引用
+  double ElapseTime() const
+  {
+    return state_cast<const IElapsedTime &>().ElapsedTime();
+  }
 };
 
-
-class StopState : public sc::simple_state< StopState, MainState >
+//定义大状态，管理子状态的公共变量
+struct Active : sc::simple_state<Active, StopWatch, Stopped>
 {
-public:
-    typedef sc::transition< EvtStartStop, RunState > reactions; //状态切换
+  typedef sc::transition<EvReset, Active> reactions;
+  Active() :
+    elapsedTime_(0.0)
+  {}
 
-    StopState(void)
-    {
-        std::cout<<"Enter StopState"<<std::endl;
-    }
+  double ElapsedTime() const {return elapsedTime_;}
+  double &ElapsedTime() {return elapsedTime_;}
 
-    ~StopState(void)
-    {
-        std::cout<<"Exit StopState"<<std::endl;
-    }
+  private:
+  double elapsedTime_;
 };
 
-class RunState : public sc::simple_state< RunState, MainState >
+//定义小状态
+struct Stopped : IElapsedTime, sc::simple_state<Stopped, Active>
 {
-public:
-    typedef sc::transition< EvtStartStop, StopState > reactions;
-    RunState(void)
-    {
-        std::cout<<"Enter RunState"<<std::endl;
-        mStartTime = 0;
-    }
-
-    ~RunState(void)
-    {
-        std::cout<<"Exit RunState"<<std::endl;
-        context<MainState>().mTime += std::difftime(std::time(0), mStartTime);
-    }
-
-    std::time_t mStartTime;
+  typedef sc::transition<EvReset, Running> reactions;
+  virtual double ElapsedTime() const
+  {
+    return context<Active>().ElapsedTime();
+  }
 };
 
-
-int _tmain(int argc, _TCHAR* argv[])
+struct Running : IElapsedTime, sc::simple_state<Running, Active>
 {
-    Machine mc;
-    mc.initiate();
+  typedef sc::transition<EvReset, Stopped> reactions;
+  Running() : startTime_(std::time(0)){}
+  //context<>返回指定状态的引用,本状态活着，则上级状态也活着
+  ~Running()
+  {
+    context<Active>().ElapsedTime() += std::difftime(std::time(0), startTime_);
+  }
+  virtual double ElapsedTime() const
+  {
+    return context<Active>().ElapsedTime() + std::difftime(std::time(0), startTime_);
+  }
+  private:
+    std::time_t startTime_;
+};
 
-    mc.process_event(EvtStartStop());
-    std::cout<<std::endl;
-    mc.process_event(EvtStartStop());
-    std::cout<<std::endl;
-    mc.process_event(EvtReset());
-    std::cout<<std::endl;
-    mc.process_event(EvtGo());
-    std::cout<<std::endl;
-    mc.process_event(EvtGo());
-
-    return 0;
+int main(int argc, char** argv)
+{
+  StopWatch myWatch;
+  myWatch.initiate();
+  std::cout << myWatch.ElapseTime() << std::endl;//当前态处于暂停，因此state_cast返回暂停态的引用
+  myWatch.process_event(EvStartStop());;
+  std::cout << myWatch.ElapseTime() << std::endl;//当前态处于运行，因此state_cast返回运行态的引用
+  myWatch.process_event(EvStartStop());;
+  std::cout << myWatch.ElapseTime() << std::endl;//当前态处于运行，因此state_cast返回运行态的引用
+  myWatch.process_event(EvStartStop());;
+  std::cout << myWatch.ElapseTime() << std::endl;//当前态处于运行，因此state_cast返回运行态的引用
+  myWatch.process_event(EvStartStop());;
+  std::cout << myWatch.ElapseTime() << std::endl;//当前态处于运行，因此state_cast返回运行态的引用
+  return 0;
 }

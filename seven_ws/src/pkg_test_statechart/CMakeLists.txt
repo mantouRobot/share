@@ -7,8 +7,8 @@ project(pkg_test_statechart)
 find_package(catkin REQUIRED)
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
-
+# find_package(Boost REQUIRED COMPONENTS system statechart)
+#find_package(Boost REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -115,6 +115,9 @@ target_link_libraries(test_statechart_helloworld ${catkin_LIBRARIES})
 
 add_executable(test_statechart_stopwatch src/test_statechart_stopwatch.cpp)
 target_link_libraries(test_statechart_stopwatch ${catkin_LIBRARIES})
+
+add_executable(test_statechart_twostate src/test_statechart_twostate.cpp)
+target_link_libraries(test_statechart_twostate ${catkin_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(pkg_test_statechart
