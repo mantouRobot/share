@@ -40,7 +40,7 @@ struct StopWatch : sc::state_machine<StopWatch, Active>
   }
 };
 
-//定义大状态，管理子状态的公共变量
+//定义大状态，一方面接受reset事件，另一方面管理子状态的公共变量
 struct Active : sc::simple_state<Active, StopWatch, Stopped>
 {
   typedef sc::transition<EvReset, Active> reactions;

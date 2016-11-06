@@ -4,7 +4,8 @@ project(pkg_test_statechart)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+  roscpp)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system statechart)
@@ -118,6 +119,9 @@ target_link_libraries(test_statechart_stopwatch ${catkin_LIBRARIES})
 
 add_executable(test_statechart_twostate src/test_statechart_twostate.cpp)
 target_link_libraries(test_statechart_twostate ${catkin_LIBRARIES})
+
+add_executable(test_statechart_foobar src/test_statechart_foobar.cpp)
+target_link_libraries(test_statechart_foobar ${catkin_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(pkg_test_statechart

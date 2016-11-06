@@ -14,6 +14,8 @@ class Foo(smach.State):
     smach.State.__init__(self, outcomes=['outcome1','outcome2'])
     self.counter = 0
 
+#此处counter不应该每次都初始化为0了吗？
+#是不是不存在构造析构的状态类这一说？
   def execute(self, userdata):
     rospy.loginfo('Executing state FOO')
     if self.counter < 3:
