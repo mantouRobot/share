@@ -19,7 +19,17 @@ class RunState;
 class TwoState;
 
 //定义状态机                             初始化状态 MainState
-class Machine : public sc::state_machine< Machine, MainState > {};
+class Machine : public sc::state_machine< Machine, MainState > {
+public:
+  Machine()
+  {
+    std::cout << "Enter the state machine." << std::endl;
+  }
+  ~Machine()
+  {
+    std::cout << "Exit the state machine." << std::endl;
+  }
+};
 
 //定义 MainState 状态 ， 它属于Machine， 它的子状态为 StopState
 class MainState : public sc::simple_state< MainState, Machine, StopState >
@@ -105,15 +115,15 @@ int main(int argc, char* argv[])
     Machine mc;
     mc.initiate();//进入主态，进入暂停态
 
-    mc.process_event(EvtStartStop());//离开暂停态，进入运行态
-    std::cout<<std::endl;
-    mc.process_event(EvtStartStop());//离开运行太，进入暂停态
-    std::cout<<std::endl;
-    mc.process_event(EvtReset());//离开暂停态，离开主态，进入主态，进入暂停态
-    std::cout<<std::endl;
-    mc.process_event(EvtGo());//离开暂停态，离开第一主态，进入第二主态
-    std::cout<<std::endl;
-    mc.process_event(EvtGo());//离开第二主态，进入第一主态，进入暂停态
+//    mc.process_event(EvtStartStop());//离开暂停态，进入运行态
+//    std::cout<<std::endl;
+//    mc.process_event(EvtStartStop());//离开运行太，进入暂停态
+//    std::cout<<std::endl;
+//    mc.process_event(EvtReset());//离开暂停态，离开主态，进入主态，进入暂停态
+//    std::cout<<std::endl;
+//    mc.process_event(EvtGo());//离开暂停态，离开第一主态，进入第二主态
+//    std::cout<<std::endl;
+//    mc.process_event(EvtGo());//离开第二主态，进入第一主态，进入暂停态
 
     return 0;
 }
