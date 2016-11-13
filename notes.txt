@@ -59,3 +59,8 @@
 26. md5sum 注意是否是消息类型，服务类型，action类型名字是否正确
 27. mat.at<uchar>(x, y) and mat.at<uchar>(Point(x,y))不同
 28. cols, rows，行列分清，xy分清！！高是rows, 宽是cols
+29. invalid initialization of non-const reference of type '' from an rvalue of type ''
+    意思是不能将一个引用临时变量，除非设定为const 引用
+		如void f(int &a);	f(a+b)错误，如果你把临时变量作为非const引用参数传递，一方面，在函数申明中，使用非常量型的引用告诉编译器你需要得到函数对某个对象的修改结果，
+		可是你自己又不给变量起名字，直接丢弃了函数的修改结果，编译器只能说：“大哥，你这是干啥呢，告诉我把结果给你，等我把结果给你了，你又直接给扔了，你这不是在玩我呢吗？”所以编译器一怒之下就不让过了。这下大家明白了吧
+		而常量引用因为反正不修改这个临时变量，所以编译器就通过了

@@ -15,8 +15,8 @@
 
 ////////////////////////////////////////////////////////////////////
 // Standard includes:
-#include <gl/gl.h>
-#include <gl/glu.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
 
 void ARDrawingContextDrawCallback(void* param)
 {

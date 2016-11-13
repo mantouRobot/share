@@ -12,3 +12,4 @@ link_directories(${OpenGL_LIBRARY_DIR})
 
 include_directories(${EXAMPLE_MARKERLESS_AR_SOURCE_DIR}/src)
 add_subdirectory(src)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
