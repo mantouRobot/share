@@ -16,5 +16,4 @@ DebugHelpers.hpp
 
 target_link_libraries( markerless_ar_demo ${OpenCV_LIBRARIES} )
 target_link_libraries( markerless_ar_demo ${OPENGL_LIBRARIES} )
-     
 install (TARGETS markerless_ar_demo DESTINATION bin)

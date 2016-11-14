@@ -25,7 +25,7 @@
  * Processes a recorded video or live view from web-camera and allows you to adjust homography refinement and 
  * reprojection threshold in runtime.
  */
-void processVideo(const cv::Mat& patternImage, CameraCalibration& calibration, const cv::VideoCapture& capture);
+void processVideo(const cv::Mat& patternImage, CameraCalibration& calibration, cv::VideoCapture &capture);
 
 /**
  * Processes single image. The processing goes in a loop.
@@ -63,7 +63,8 @@ int main(int argc, const char * argv[])
 
     if (argc == 2)
     {
-        processVideo(patternImage, calibration, cv::VideoCapture());
+        cv::VideoCapture capture(0);
+        processVideo(patternImage, calibration, capture);
     }
     else if (argc == 3)
     {
@@ -91,7 +92,7 @@ int main(int argc, const char * argv[])
     return 0;
 }
 
-void processVideo(const cv::Mat& patternImage, CameraCalibration& calibration, const cv::VideoCapture& capture)
+void processVideo(const cv::Mat& patternImage, CameraCalibration& calibration, cv::VideoCapture& capture)
 {
     // Grab first frame to get the frame dimensions
     cv::Mat currentFrame;  
