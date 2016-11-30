@@ -118,9 +118,9 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-link_directories(/home/mantou/nxrobo_package/install/lib)
-add_executable(test_sqdb_wr src/test_sqdb_wr.cpp)
-target_link_libraries(test_sqdb_wr ${catkin_LIBRARIES} m pthread sqdb )
+#link_directories(/home/mantou/nxrobo_package/install/lib)
+#add_executable(test_sqdb_wr src/test_sqdb_wr.cpp)
+#target_link_libraries(test_sqdb_wr ${catkin_LIBRARIES} m pthread sqdb )
 
 
 ## Declare a C++ library
