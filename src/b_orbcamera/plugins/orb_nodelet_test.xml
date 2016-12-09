@@ -1,3 +1,0 @@
-<library path="lib/libb_orbcamera_nodelet_test">
-  	<class name="b_orbcamera/TestOrbbecCameraNodelet" type="b_orbcamera::TestOrbbecCameraNodelet" base_class_type="nodelet::Nodelet"/>  
-</library>

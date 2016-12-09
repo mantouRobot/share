@@ -1,7 +1,0 @@
-<launch>
-  <param name="param0" type="string" value="000"/>
-<!--  <node pkg="nodelet" type="nodelet" name="my_manager" args="manager" output="screen"/>-->
-  <node pkg="nodelet" type="nodelet" name="pkg_" args="load pkg_test_nodelet/TestNodelet camera" output="screen">
-    <param name="param1" type="string" value="hello"/>
-  </node>
-</launch>

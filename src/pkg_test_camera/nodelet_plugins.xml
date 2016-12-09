@@ -1,9 +1,0 @@
-<library path="lib/libtest_camera">
-  <class name="pkg_test_camera/TestCameraNodelet"
-         type="pkg_test_camera::TestCameraNodelet"
-         base_class_type="nodelet::Nodelet">
-  <description>
-    This is my nodelet.
-  </description>
-</class>
-</library>
