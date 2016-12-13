@@ -69,3 +69,6 @@
 		一句话，不可以非常量引用临时变量
 30. error: passing const 'sss' as 'this' argument of 'ccc' discards qualifiers
     编译器有一个安全限定，认为const对象只能调用const函数，丢弃了限定符
+31. error:moc: Cannot open options file specified with @...
+    这是由于含有非英文字符路径造成，即accentuated charactors.
+    可见，系统确实应该安装英文版，且程序目录最好不出现中文。
