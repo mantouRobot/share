@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="node_my_tf" args="1 1 1 0 0 0 parents children" >
+		<param name="my_param" value="8"/>
+	</node>
+</launch>

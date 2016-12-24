@@ -1,0 +1,9 @@
+<launch>
+<!--  <include file="$(find pkg_test_movebase)/launch/move_base.launch"/>-->
+
+<!--此全局代价地图用于查看是否可以make plan-->
+  <node pkg="pkg_test_movebase" type="test_movebase_node" name="test_movebase_node" output="screen">
+    <rosparam file="$(find pkg_test_movebase)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find pkg_test_movebase)/param/global_costmap_params.yaml" command="load" />
+  </node>
+</launch>
