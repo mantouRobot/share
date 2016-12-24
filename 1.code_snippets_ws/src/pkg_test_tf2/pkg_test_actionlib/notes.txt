@@ -1,3 +1,0 @@
-simple actionlib使用小结：
-1. 服务端构造：
-   actionlib::

@@ -1,15 +1,12 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(pkg_test_sqdb)
+project(pkg_test_eigen)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  common
 )
-
-
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -102,7 +99,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES pkg_test_sqdb
+#  LIBRARIES pkg_test_eigen
 #  CATKIN_DEPENDS roscpp
 #  DEPENDS system_lib
 )
@@ -118,30 +115,25 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-#link_directories(/home/mantou/nxrobo_package/install/lib)
-#add_executable(test_sqdb_wr src/test_sqdb_wr.cpp)
-#target_link_libraries(test_sqdb_wr ${catkin_LIBRARIES} m pthread sqdb )
-
-
 ## Declare a C++ library
-# add_library(pkg_test_sqdb
-#   src/${PROJECT_NAME}/pkg_test_sqdb.cpp
+# add_library(pkg_test_eigen
+#   src/${PROJECT_NAME}/pkg_test_eigen.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(pkg_test_sqdb ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(pkg_test_eigen ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(pkg_test_sqdb_node src/pkg_test_sqdb_node.cpp)
+ add_executable(main src/main.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(pkg_test_sqdb_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(pkg_test_eigen_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(pkg_test_sqdb_node
+# target_link_libraries(pkg_test_eigen_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -160,7 +152,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS pkg_test_sqdb pkg_test_sqdb_node
+# install(TARGETS pkg_test_eigen pkg_test_eigen_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -185,7 +177,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_pkg_test_sqdb.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_pkg_test_eigen.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

@@ -1,4 +1,0 @@
-<launch>
-  <node pkg="pkg_test_actionlib" type="client_node" name="a" output="screen"/>
-  <node pkg="pkg_test_actionlib" type="client_node" name="b" output="screen"/>
-</launch>
