@@ -72,3 +72,9 @@
 31. error:moc: Cannot open options file specified with @...
     这是由于含有非英文字符路径造成，即accentuated charactors.
     可见，系统确实应该安装英文版，且程序目录最好不出现中文。
+32. 运行错误：shared_ptr:Assertion 'px != 0' failed.
+    指针定义了但是没有初始化，没有new对象给它。
+33. 返回一个点云指针（boost::shared_ptr),返回共享指针和返回共享指针的引用有什么区别？
+    返回共享指针就不用返回引用了。
+34. roslaunch 不能启动，如果是个脚本，是否缺失#?
+    删除build，重新编译安装

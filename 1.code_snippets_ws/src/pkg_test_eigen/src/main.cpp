@@ -47,14 +47,17 @@ int main(int argc, char** argv)
   Eigen::Isometry3d c2_to_world = Eigen::Isometry3d::Identity();
   c2_to_world.rotate(Eigen::Quaterniond(-0.5, 0.4, -0.1, 0.2).inverse().normalized());
   c2_to_world.pretranslate(-Eigen::Vector3d(-0.1, 0.5, 0.3));
-  cout << "luobo2 inverse: " << endl << world_to_c2.matrix() << endl;
+  cout << "luobo2 inverse: " << endl << c2_to_world.matrix() << endl;
 
   //萝卜1到object
-  Eigen::Vector4d c1_to_object(0.5, 0, 0.2, 1);//齐次坐标
+  Eigen::Isometry3d c1_to_object = Eigen::Isometry3d::Identity();
+  c1_to_object.pretranslate(Eigen::Vector3d(0.5, 0, 0.2));
+//  Eigen::Vector4d c1_to_object(0.5, 0, 0.2, 1);//齐次坐标
 
   //求萝卜2到object
   //萝卜2到object = 萝卜1到物体*world_to_萝卜1*萝卜2_to_world
-  Eigen::Vector4d result = c1_to_object*world_to_c1*(c2_to_world);
+  Eigen::Isometry3d result = c1_to_object*world_to_c1*(c2_to_world);
+  cout << "result: " << endl << result.translation() << endl;
 }
 
 
