@@ -9,7 +9,7 @@ struct CURVE_FITTING_COST
   CURVE_FITTING_COST(double x, double y) : x_(x), y_(y) {}
   //残差的计算
   template<typename T>
-  bool operator() (const T* const abc, T* residual)  //模型参数3维，残差1维
+  bool operator() (const T* const abc, T* residual) const //模型参数3维，残差1维
   {
     residual[0] = T(y_) - ceres::exp(abc[0]*T(x_)*T(x_)+abc[1]*T(x_)+abc[2]);
     return true;
