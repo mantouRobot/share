@@ -78,3 +78,6 @@
     返回共享指针就不用返回引用了。
 34. roslaunch 不能启动，如果是个脚本，是否缺失#?
     删除build，重新编译安装
+35. boost::format format("/homa/mantou/%s/%d.png");
+    imread((format%"rgb"%(i+1)).str());
+36. std::max(a, 10)编译不通过，因为a是double
