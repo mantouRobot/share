@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pkg_test_vo)
 
+set(CMAKE_CXX_FLAGS "-std=c++11")
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -121,9 +122,10 @@ catkin_package(
 # add_dependencies(pkg_test_vo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3.1 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
  add_executable(vo src/vo.cpp)
+ add_executable(vo_gaoxiang src/vo_gaoxiang.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -134,6 +136,11 @@ include_directories(${OpenCV_INCLUDE_DIRS})
    ${catkin_LIBRARIES}
    ${OpenCV_LIBRARIES}
  )
+
+target_link_libraries(vo_gaoxiang
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
 
 #############
 ## Install ##
