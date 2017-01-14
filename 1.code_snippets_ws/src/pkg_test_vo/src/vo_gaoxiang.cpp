@@ -6,6 +6,7 @@
 #include <boost/format.hpp>
 
 using namespace std;
+using namespace cv;
 
 /**
  * @brief pixel2cam 将像素坐标根据内参矩阵转换到归一化平面坐标
@@ -64,6 +65,43 @@ void poseEstimate2dTo2d(std::vector<cv::KeyPoint> kp1, std::vector<cv::KeyPoint>
   cout << "t is " << endl << t << endl;
 }
 
+/**
+ * @brief triangulation 从对极约束x2^Ex1=0计算E，然后分解得到R，t;再根据三角化既可测量无尺度的深度值
+ * @param kp1
+ * @param kp2
+ * @param matchers
+ * @param R
+ * @param t
+ * @param points 输出结果s2x1^Rx2+x1^t=0
+ */
+void triangulation(const vector<KeyPoint> &kp1, const vector<KeyPoint> &kp2, const vector<DMatch> &matchers, const Mat &R, const Mat &t, vector<Point3d> &points)
+{
+  Mat T1 = (Mat_<double>(3,4) << 1,0,0,0,
+                                 0,1,0,0,
+                                 0,0,1,0);
+  Mat T2 = (Mat_<double>(3,4) << R.at<double>(0,0), R.at<double>(0,1), R.at<double>(0,2), t.at<double>(0,0),
+                                 R.at<double>(1,0), R.at<double>(1,1), R.at<double>(1,2), t.at<double>(1,0),
+                                 R.at<double>(2,0), R.at<double>(2,1), R.at<double>(2,2), t.at<double>(2,0));
+  Mat K = (Mat_<double>(3,3) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1);
+  vector<Point2d> pts1, pts2;
+  for(DMatch m : matchers)
+  {
+    pts1.push_back(pixel2cam(kp1[m.queryIdx].pt, K));
+    pts2.push_back(pixel2cam(kp2[m.trainIdx].pt, K));
+  }
+
+  Mat pts_4d;
+  cv::triangulatePoints(T1, T2, pts1, pts2, pts_4d);
+
+  //将Pts_4d转换为非齐次坐标
+  for(int i = 0; i < pts_4d.cols; i++)
+  {
+    Mat x = pts_4d.col(i);
+    x /= x.at<double>(3,0); //归一化
+    Point3d p(x.at<double>(0,0), x.at<double>(1,0), x.at<double>(2,0));
+    points.push_back(p);
+  }
+}
 
 int main(int argc, char** argv)
 {
@@ -135,6 +173,23 @@ int main(int argc, char** argv)
 //    break;
   }
 
+  //三角化
+  vector<Point3d> points;
+  triangulation(kp1, kp2, good_matchs, R, t, points);
+  //验证三角化点与特征点的重投影关系
+  for(int i = 0; i < points.size(); i++)
+  {
+    Point2d pt1_cam = pixel2cam(kp1[good_matchs[i].queryIdx].pt, K);
+    Point2d pt1_cam_3d(points[i].x/points[i].z, points[i].y/points[i].z);
+    cout << "point in the first camera frame: " << pt1_cam << endl;
+    cout << "point in the projected from 3D " << pt1_cam_3d << ", d=" << points[i].z << endl;
+    //第二个图
+    Point2f pt2_cam = pixel2cam(kp2[good_matchs[i].trainIdx].pt, K);
+    Mat pt2_trans = R*(Mat_<double>(3,1) << points[i].x, points[i].y, points[i].z) + t;
+    pt2_trans /= pt2_trans.at<double>(2,0);
+    cout << "point in the second camera frame: " << pt2_cam << endl;
+    cout << "point reprojected from second frame: " << pt2_trans.t() << endl;
+  }
   cv::waitKey(0);
 }
 
