@@ -81,3 +81,4 @@
 35. boost::format format("/homa/mantou/%s/%d.png");
     imread((format%"rgb"%(i+1)).str());
 36. std::max(a, 10)编译不通过，因为a是double
+37. string打印出来是??????要考虑可能不是英文字符，增加处理。
