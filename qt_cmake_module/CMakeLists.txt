@@ -10,7 +10,8 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-#find_package()包含一些通用的第三方库
+#包含一些通用的第三方库
+#find_package(PCL REQUIRED COMPONENTS common io)
 
 include_directories(${PROJECT_SOURCE}/include)
 add_subdirectory(src)
