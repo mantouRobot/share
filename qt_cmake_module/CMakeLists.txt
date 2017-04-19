@@ -13,7 +13,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #包含一些通用的第三方库
 #find_package(PCL REQUIRED COMPONENTS common io)
 
-include_directories(${PROJECT_SOURCE}/include)
+include_directories(${PROJECT_SOURCE_DIR}/include)
 add_subdirectory(src)
 add_subdirectory(test)
 
