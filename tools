@@ -7,6 +7,7 @@
      下载U盘 umount /dev/sdc
   3. 制作启动盘
      sudo dd if=/home/resystem/resystem/.iso of=/dev/sdc，等待U盘闪烁结束
+     （建议在windows下用UltraISO来制作）
   4. 在windows上画好空闲区域
   5. 开机启动，引导从U盘启动，安装
   6. 在Ultro下制作引导
