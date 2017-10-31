@@ -1,0 +1,12 @@
+刷系统：
+  1. 使用remastersystem软件制作iso.
+     http://www.cnblogs.com/chenkun1/p/5532977.html
+  2. 准备u盘
+     打开disks磁盘工具，format U盘
+     查看U盘挂载 df -h
+     下载U盘 umount /dev/sdc
+  3. 制作启动盘
+     sudo dd if=/home/resystem/resystem/.iso of=/dev/sdc，等待U盘闪烁结束
+  4. 在windows上画好空闲区域
+  5. 开机启动，引导从U盘启动，安装
+  6. 在Ultro下制作引导
